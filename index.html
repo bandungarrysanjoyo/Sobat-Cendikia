@@ -1,23 +1,2189 @@
 <!doctype html>
-<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#123d35"><title>Sobat Cendikia — Petualangan Angka Pintar</title><style>
-@import url('');:root{--ink:#163c35;--green:#176b53;--mint:#dbf2e5;--gold:#f5bd4f;--cream:#fffaf0;--coral:#f17d63;--muted:#71837a;--line:#e6eadf}*{box-sizing:border-box}body{margin:0;background:#f5f8ef;color:var(--ink);font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif}button,input{font:inherit}button{cursor:pointer;border:0}.app{max-width:1120px;margin:auto;padding:0 24px}.top{height:78px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:19px}.brandmark{width:42px;height:42px;border-radius:15px;background:var(--green);color:#fff;display:grid;place-items:center;font-size:24px;box-shadow:0 5px 12px #176b5330}.brand small{display:block;color:#71837a;font-size:10px;letter-spacing:1.7px}.topright{display:flex;align-items:center;gap:12px}.avatar{border-radius:50%;background:#ffe6ad;width:40px;height:40px;display:grid;place-items:center}.pill{background:#fff;border:1px solid var(--line);border-radius:99px;padding:9px 14px;font-size:13px;color:var(--ink);font-weight:700}.main{padding:22px 0 65px}.welcome{display:flex;align-items:center;justify-content:space-between;margin:18px 0 28px}.eyebrow{font-size:12px;color:var(--green);font-weight:900;letter-spacing:1.5px;text-transform:uppercase}.welcome h1{font-size:clamp(29px,4vw,44px);line-height:1.1;margin:9px 0 10px;letter-spacing:-1.5px}.welcome p{color:var(--muted);margin:0}.hero-art{width:185px;height:150px;border-radius:34px;background:#e1f3e6;display:grid;place-items:center;font-size:78px;position:relative;transform:rotate(2deg)}.hero-art:after{content:'✦';position:absolute;right:20px;top:10px;color:#efb844;font-size:27px}.sectionhead{display:flex;align-items:end;justify-content:space-between;margin:30px 0 15px}.sectionhead h2{margin:0;font-size:22px}.sectionhead p{margin:5px 0 0;color:var(--muted);font-size:13px}.gate{padding:17px 20px;border-radius:19px;margin:16px 0 12px;display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line)}.gate-icon{width:45px;height:45px;border-radius:14px;background:#e6f5eb;display:grid;place-items:center;font-size:24px}.gate h3{font-size:15px;margin:0 0 3px}.gate p{font-size:12px;margin:0;color:var(--muted)}.levels{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.level{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px;min-height:175px;position:relative;transition:.2s;cursor:pointer;overflow:hidden}.level:hover{transform:translateY(-3px);box-shadow:0 12px 24px #183c3510;border-color:#b7d8c4}.leveltop{display:flex;justify-content:space-between;align-items:center}.levnum{font-size:11px;color:var(--muted);font-weight:900;letter-spacing:.8px}.levemoji{font-size:26px}.level h3{margin:12px 0 5px;font-size:17px}.level p{color:var(--muted);font-size:12px;line-height:1.5;margin:0;max-width:88%}.stars{margin-top:12px;color:#edb333;font-size:15px;letter-spacing:2px}.cta{margin-top:14px;color:var(--green);font-size:12px;font-weight:900}.streak{background:#fff4d9;border:1px solid #f5e3b7;padding:5px 10px;border-radius:99px;font-weight:800;font-size:12px}.footer{text-align:center;color:#92a097;font-size:11px;margin-top:35px}.screen{display:none}.screen.active{display:block}.card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:clamp(20px,4vw,34px);box-shadow:0 14px 35px #183c3509}.back{background:transparent;color:var(--green);font-weight:800;padding:8px 0;margin-bottom:12px}.quizhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.progress{height:9px;background:#edf1eb;border-radius:10px;overflow:hidden;margin:10px 0 25px}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#31a477,#8ed49c);border-radius:10px;transition:width .3s}.question-label{font-weight:900;color:#92a097;font-size:12px;letter-spacing:1px;text-transform:uppercase}.question{font-size:clamp(25px,4vw,38px);line-height:1.3;margin:12px 0 27px;letter-spacing:-.8px}.visual{font-size:39px;background:#f3f8ee;border-radius:18px;padding:12px 18px;display:inline-block;margin:0 0 23px}.answers{display:grid;grid-template-columns:1fr 1fr;gap:12px}.answer{background:#fff;border:2px solid #e7eee5;border-radius:15px;text-align:left;padding:16px;font-weight:800;color:var(--ink);transition:.15s}.answer:hover{border-color:#81bd94;background:#f5fbf5}.answer.correct{border-color:#3aad74;background:#e8f7eb}.answer.wrong{border-color:#f08a74;background:#fff0ec}.feedback{display:none;padding:15px 17px;border-radius:15px;margin-top:18px;line-height:1.5}.feedback.show{display:block}.feedback.ok{background:#e8f7eb;color:#205c3e}.feedback.no{background:#fff4dd;color:#75551e}.primary{background:var(--green);color:white;padding:14px 21px;border-radius:14px;font-weight:900;box-shadow:0 7px 15px #176b5328}.primary:hover{background:#10543f}.nextrow{display:flex;justify-content:flex-end;margin-top:16px}.result{text-align:center;padding:28px 10px}.medal{font-size:75px}.result h1{font-size:34px;margin:10px 0}.score{font-size:58px;font-weight:1000;color:var(--green);line-height:1}.result p{color:var(--muted);line-height:1.6}.result-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:22px}.login-overlay{position:fixed;inset:0;background:#102c25a8;z-index:5;display:grid;place-items:center;padding:18px}.loginbox{width:min(440px,100%);background:var(--cream);padding:32px;border-radius:26px;box-shadow:0 30px 70px #0003}.loginbox h1{font-size:29px;margin:13px 0 8px}.loginbox p{color:var(--muted);font-size:14px;line-height:1.5}.field{display:block;margin:13px 0}.field span{display:block;font-size:12px;font-weight:800;margin-bottom:6px}.field input{width:100%;padding:13px;border:1px solid #dfe7db;border-radius:12px;background:white;outline-color:#5aa87a}.login-buttons{display:grid;gap:9px;margin-top:17px}.secondary{background:#e8f2e8;color:var(--green);padding:13px;border-radius:13px;font-weight:900}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#163c35;color:#fff;padding:11px 17px;border-radius:12px;display:none;z-index:9}.toast.show{display:block}@media(max-width:700px){.app{padding:0 17px}.hero-art{width:115px;height:110px;font-size:57px;border-radius:27px}.welcome{align-items:center}.welcome p{max-width:230px;line-height:1.5}.levels{grid-template-columns:repeat(2,1fr);gap:10px}.level{padding:14px;min-height:180px}.top{height:68px}.pill{padding:8px 11px}.answers{grid-template-columns:1fr}.sectionhead{margin-top:25px}}@media(max-width:400px){.hero-art{display:none}.levels{grid-template-columns:1fr 1fr}.level h3{font-size:15px}}
-/* Cheerful classroom makeover */
-:root{--ink:#28365f;--green:#4766d8;--mint:#e7efff;--gold:#ffc847;--cream:#fffdf6;--coral:#ff786c;--muted:#747c98;--line:#e7e9f4}
-body{background-color:#fbfaff;background-image:radial-gradient(#ffcf5940 1.4px,transparent 1.4px),radial-gradient(#9ddfc240 1.4px,transparent 1.4px);background-size:34px 34px,42px 42px;background-position:0 0,17px 18px}
-.brandmark{background:linear-gradient(145deg,#ff8b69,#ffbd45);box-shadow:0 6px 0 #ed805252;color:#fff}.brand small{letter-spacing:1.4px;color:#8588a5}
-.hero-art{background:linear-gradient(145deg,#c9f4ed,#dcd9ff);box-shadow:0 8px 0 #d5d6ef;transform:rotate(3deg)}.hero-art:before{content:'☁️';position:absolute;left:13px;bottom:10px;font-size:24px}.hero-art:after{content:'✦';color:#ffad32;animation:twinkle 1.5s infinite alternate}
-@keyframes twinkle{to{transform:scale(1.45) rotate(18deg)}}
-.level{border:2px solid #fff;box-shadow:0 5px 0 #28365f0b,0 10px 24px #5266a20b;background:linear-gradient(145deg,#fff 75%,#f4f2ff)}.level:nth-child(3n+1){background:linear-gradient(145deg,#fff 72%,#e9f9f1)}.level:nth-child(3n+2){background:linear-gradient(145deg,#fff 72%,#fff2d8)}.level:nth-child(3n){background:linear-gradient(145deg,#fff 72%,#ffe9e5)}.level:hover{box-shadow:0 7px 0 #28365f10,0 16px 28px #5266a222;border-color:#d9dcff}.levemoji{width:46px;height:46px;border-radius:16px;background:#fff3d2;display:grid;place-items:center;box-shadow:0 3px 0 #f3dfae}.level:nth-child(3n+2) .levemoji{background:#e5f8ec}.level:nth-child(3n) .levemoji{background:#ffe8e5}.gate{border:2px solid #fff;box-shadow:0 4px 0 #28365f08;background:linear-gradient(90deg,#fff,#f4f5ff)}.gate-icon{background:#e9edff}.primary{background:linear-gradient(135deg,#5472e9,#785ee8);box-shadow:0 5px 0 #394bad;color:#fff}.primary:hover{background:linear-gradient(135deg,#4867df,#6950d8);transform:translateY(-1px)}.secondary{background:#fff0c9;color:#78551b;box-shadow:0 4px 0 #f2dfa9}.answer{border:2px solid #ececfa;box-shadow:0 3px 0 #e4e5f2}.answer:hover{border-color:#a9afff;background:#f5f4ff;transform:translateY(-1px)}.answer.correct{border-color:#62c88c;background:#e9fff0;box-shadow:0 3px 0 #b2e4c0}.answer.wrong{border-color:#ff9884;background:#fff1ec;box-shadow:0 3px 0 #f5c4b7}.progress span{background:linear-gradient(90deg,#34c890,#76d8a3,#ffca53)}
-.reward-wrap{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 50% 0%,#fff0bc 0%,#fff 47%);}.reward-wrap:before,.reward-wrap:after{content:'✦  ✧  ✨  ✦  ✧';position:absolute;z-index:-1;color:#ffc847;font-size:25px;letter-spacing:17px;white-space:nowrap;animation:drift 7s linear infinite}.reward-wrap:before{top:20px;left:-15px}.reward-wrap:after{bottom:35px;right:-18px;color:#79cfaa;animation-direction:reverse}@keyframes drift{to{transform:translateX(28px) rotate(4deg)}}.reward-wrap .medal{display:grid;place-items:center;width:120px;height:120px;border-radius:50%;margin:0 auto 14px;background:linear-gradient(145deg,#fff1b8,#ffe18a);box-shadow:0 8px 0 #f1c75d,0 14px 30px #f4c85655;animation:bounce 1.1s ease-in-out infinite alternate}.reward-wrap h1{color:#455ed0}.reward-wrap .score{color:#ff8b47;text-shadow:0 3px 0 #ffe0ab}.reward-wrap .primary{padding:15px 24px}.reward-tag{display:inline-block;background:#e7f8ea;color:#348457;padding:8px 15px;border-radius:99px;font-weight:900;font-size:13px;margin:12px 0 2px}.reward-motto{font-weight:800;color:#596184!important}@keyframes bounce{to{transform:translateY(-8px) rotate(3deg)}}.result-actions button{transition:.2s}.result-actions button:hover{transform:translateY(-3px)}.streak{background:#fff2c9;border-color:#f5dda0;color:#72531a}.toast{background:#435bd0;box-shadow:0 5px 18px #435bd055}
-@media(max-width:600px){.reward-wrap .medal{width:100px;height:100px;font-size:64px}.hero-art{box-shadow:0 5px 0 #d5d6ef}}
-.doodle-strip{height:112px;border-radius:23px;overflow:hidden;margin:-3px 0 27px;border:3px solid white;box-shadow:0 5px 0 #28365f0b,0 9px 22px #5266a20c;background:#fff}.doodle-strip img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 47%}@media(max-width:600px){.doodle-strip{height:76px;border-radius:17px;margin-bottom:22px}}
-</style></head><body><div class="app"><header class="top"><div class="brand"><div class="brandmark">✦</div><div>Sobat Cendikia<small>PETUALANGAN ANGKA PINTAR</small></div></div><div class="topright"><span class="streak">🌟 <b id="totalStars">0</b></span><button id="profile" class="pill" onclick="openLogin()">👤 <span id="userLabel">Masuk</span></button></div></header><main class="main"><section id="home" class="screen active"><div class="welcome"><div><div class="eyebrow">Assalamu'alaikum, Sobat! 👋</div><h1>Siap berpetualang<br>hari ini?</h1><p>Pilih pulau belajar dan taklukkan tantangan angka!</p></div><div class="hero-art">🧭</div></div><div class="doodle-strip" aria-label="Ornamen ceria Sobat Cendikia"><img src="doodles.png" alt="Ornamen pelangi, bintang, pensil, dan angka yang ceria"></div><div class="sectionhead"><div><h2>Peta Petualangan</h2><p>Enam pulau, banyak ilmu baru menanti.</p></div></div><div class="gate"><div class="gate-icon">🌱</div><div><h3>Gerbang A · Cendikia Cilik</h3><p>Kelas 1–3 · Belajar dengan benda dan cerita</p></div></div><div class="levels" id="junior"></div><div class="gate"><div class="gate-icon">🚀</div><div><h3>Gerbang B · Ekspedisi Cendikia Utama</h3><p>Kelas 4–6 · Tantangan logika dan penalaran</p></div></div><div class="levels" id="senior"></div><div class="footer">Belajar dengan tekun, jujur, dan gembira ✨</div></section><section id="game" class="screen"><button class="back" onclick="goHome()">← Kembali ke peta</button><div class="card"><div class="quizhead"><div><div class="eyebrow" id="gameLevel">PULAU 1</div><div style="font-weight:900;margin-top:4px" id="topic">Misi Matematika</div></div><span class="streak">✨ <span id="sessionScore">0</span> poin</span></div><div class="progress"><span id="bar"></span></div><div class="question-label" id="qCount">SOAL 1 DARI 10</div><div class="question" id="question"></div><div id="visual" class="visual" style="display:none"></div><div class="answers" id="answers"></div><div id="feedback" class="feedback"></div><div class="nextrow"><button class="primary" id="next" style="display:none" onclick="nextQuestion()">Lanjutkan →</button></div></div></section><section id="result" class="screen"><button class="back" onclick="goHome()">← Kembali ke peta</button><div class="card result reward-wrap"><div id="medal" class="medal">🏅</div><div class="eyebrow">MISI SELESAI</div><h1 id="resultTitle">Masya Allah!</h1><div class="score"><span id="finalScore">0</span><small style="font-size:25px">%</small></div><p id="resultDesc"></p><div class="result-actions"><button class="primary" onclick="startLevel(currentLevel)">Main lagi ↻</button><button class="secondary" onclick="goHome()">Pilih pulau lain</button></div></div></section></main></div><div id="loginOverlay" class="login-overlay" style="display:none"><div class="loginbox"><div class="brand"><div class="brandmark">✦</div><div>Sobat Cendikia<small>SELAMAT DATANG, SOBAT!</small></div></div><h1>Mulai petualanganmu</h1><p>Masuk sebagai tamu untuk langsung bermain, atau isi nama agar sapaan jadi lebih akrab.</p><label class="field"><span>Nama panggilan</span><input id="nameInput" placeholder="Contoh: Aisyah" maxlength="24"></label><label class="field"><span>Nama sekolah <small style="font-weight:400;color:#829087">(opsional)</small></span><input id="schoolInput" placeholder="Nama sekolahmu"></label><div class="login-buttons"><button class="primary" onclick="saveProfile()">Simpan & mulai bermain</button><button class="secondary" onclick="guest()">Lanjut sebagai tamu</button></div></div></div><div class="toast" id="toast"></div><script>
-const levels=[{name:'Angka di Taman',emoji:'🌳',topic:'Bilangan 1–20 · tambah · pecahan dasar',gate:'Cendikia Cilik'},{name:'Pasar Ceria',emoji:'🍉',topic:'Ganjil-genap · hitung hingga 100 · perkalian',gate:'Cendikia Cilik'},{name:'Pulau Timbangan',emoji:'⚖️',topic:'Operasi hitung · pecahan · pengukuran',gate:'Cendikia Cilik'},{name:'Labirin Pecahan',emoji:'🧩',topic:'Pecahan biasa · operasi · luas',gate:'Cendikia Utama'},{name:'Ekspedisi Angka',emoji:'🗺️',topic:'Desimal · rasio · jarak dan waktu',gate:'Cendikia Utama'},{name:'Arena Cendikia',emoji:'🏆',topic:'Bilangan negatif · operasi campuran · peluang',gate:'Cendikia Utama'}];let store=JSON.parse(localStorage.getItem('sc-progress')||'{}'),profile=JSON.parse(localStorage.getItem('sc-profile')||'null'),currentLevel=1,questions=[],qi=0,correct=0,locked=false;
-function render(){document.querySelector('#junior').innerHTML=levels.slice(0,3).map((x,i)=>tile(x,i)).join('');document.querySelector('#senior').innerHTML=levels.slice(3).map((x,i)=>tile(x,i+3)).join('');document.querySelector('#totalStars').textContent=Object.values(store).reduce((a,b)=>a+(b.stars||0),0);document.querySelector('#userLabel').textContent=profile?.name||'Masuk'}function tile(x,i){let s=store[i+1]?.stars||0;return `<article class="level" onclick="startLevel(${i+1})"><div class="leveltop"><span class="levnum">PULAU ${i+1}</span><span class="levemoji">${x.emoji}</span></div><h3>${x.name}</h3><p>${x.topic}</p><div class="stars">${'★'.repeat(s)}${'☆'.repeat(3-s)} <span style="font-size:11px;color:#829087;letter-spacing:0">${s?'Terbaik '+(store[i+1].best||0)+'%':'Ayo mulai!'}</span></div><div class="cta">JELAJAHI PULAU →</div></article>`}function openLogin(){document.querySelector('#loginOverlay').style.display='grid';if(profile){document.querySelector('#nameInput').value=profile.name;document.querySelector('#schoolInput').value=profile.school||''}}function saveProfile(){let n=document.querySelector('#nameInput').value.trim();if(!n){toast('Isi nama panggilan dulu ya 😊');return}profile={name:n,school:document.querySelector('#schoolInput').value.trim()};localStorage.setItem('sc-profile',JSON.stringify(profile));document.querySelector('#loginOverlay').style.display='none';render();toast(`Selamat datang, ${n}!`)}function guest(){profile={name:'Sobat'};localStorage.setItem('sc-profile',JSON.stringify(profile));document.querySelector('#loginOverlay').style.display='none';render()}function startLevel(n){currentLevel=n;const historyKey=`sc-last-questions-${n}`;const previous=JSON.parse(localStorage.getItem(historyKey)||'[]');questions=makeQuestions(n);for(let attempt=0;attempt<20&&JSON.stringify(questions.map(q=>q.text).sort())===JSON.stringify(previous.slice().sort());attempt++)questions=makeQuestions(n);localStorage.setItem(historyKey,JSON.stringify(questions.map(q=>q.text)));qi=0;correct=0;show('game');document.querySelector('#gameLevel').textContent=`PULAU ${n} · ${levels[n-1].name.toUpperCase()}`;document.querySelector('#topic').textContent=levels[n-1].topic;renderQ()}function show(id){document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));document.querySelector('#'+id).classList.add('active');window.scrollTo(0,0)}function goHome(){render();show('home')}function renderQ(){locked=false;let q=questions[qi];document.querySelector('#qCount').textContent=`SOAL ${qi+1} DARI ${questions.length}`;document.querySelector('#bar').style.width=`${qi/questions.length*100}%`;document.querySelector('#question').textContent=q.text;document.querySelector('#sessionScore').textContent=correct*10;let v=document.querySelector('#visual');v.style.display=q.visual?'inline-block':'none';v.textContent=q.visual||'';let a=document.querySelector('#answers');a.innerHTML=q.choices.map((x,i)=>`<button class="answer" onclick="answer(${i})">${String.fromCharCode(65+i)}. &nbsp;${x}</button>`).join('');let f=document.querySelector('#feedback');f.className='feedback';document.querySelector('#next').style.display='none'}function answer(i){if(locked)return;locked=true;let q=questions[qi],buttons=[...document.querySelectorAll('.answer')];buttons[q.correct].classList.add('correct');let ok=i===q.correct;if(ok)correct++;else buttons[i].classList.add('wrong');let f=document.querySelector('#feedback');f.className='feedback show '+(ok?'ok':'no');f.innerHTML=`<b>${ok?'Hebat, jawabanmu tepat! ✨':'Tidak apa-apa, kita belajar bersama 🌱'}</b><br>${q.explain}`;document.querySelector('#sessionScore').textContent=correct*10;document.querySelector('#next').style.display='inline-block';document.querySelector('#next').textContent=qi===questions.length-1?'Lihat hasil →':'Lanjutkan →'}function nextQuestion(){if(++qi>=questions.length){finish();return}renderQ()}function finish(){let score=correct*10,old=store[currentLevel]||{best:0,stars:0};let stars=score>=85?3:score>=70?2:score>=55?1:0;store[currentLevel]={best:Math.max(old.best,score),score,stars:Math.max(old.stars,stars)};localStorage.setItem('sc-progress',JSON.stringify(store));let title=score>=85?'Cendikia Mahir · Mumtaz':score>=70?'Cendikia Cakap · Jayyid Jiddan':score>=55?'Cendikia Berkembang · Maqbul':'Sahabat Belajar';document.querySelector('#medal').textContent=score>=85?'🏅':score>=55?'🥈':'🌱';document.querySelector('#resultTitle').textContent=score>=85?'Masya Allah, luar biasa!':score>=55?'Terus berusaha, Sobat!':'Ayo coba lagi, kamu pasti bisa!';document.querySelector('#finalScore').textContent=score;document.querySelector('#resultDesc').innerHTML=`<span class="reward-tag">${title}</span><br><b>${correct} dari ${questions.length} jawaban benar</b> &nbsp; ${'⭐'.repeat(stars)||'✨'}<p class="reward-motto">${score>=85?'Kamu menguasai misi ini dengan cerdas dan teliti! Luar biasa!':score>=55?'Ketelitianmu makin baik. Setiap latihan membuatmu lebih hebat!':`Kamu sudah berani mencoba, itu hebat! Yuk latihan lagi, Sobat!`}<br>Semangat belajar, satu langkah lagi menuju petualangan baru!</p><i>“Sebaik-baik kalian adalah yang belajar dan mengajarkan ilmu.”</i>`;show('result')}
-function makeQuestions(l){let out=[];let order=Array.from({length:10},(_,i)=>i);for(let i=order.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[order[i],order[j]]=[order[j],order[i]]}for(const k of order){let q=questionFor(l,k);out.push(q)}return out.map(q=>{let correctAnswer=q.choices[q.correct];q.choices=[...new Set(q.choices)];while(q.choices.length<4)q.choices.push(String(Number(correctAnswer)+q.choices.length+2));q.choices=q.choices.slice(0,4);if(!q.choices.includes(correctAnswer))q.choices[3]=correctAnswer;q.correct=q.choices.indexOf(correctAnswer);return q})}function mk(text,ans,wrong,explain,visual=''){let c=[String(ans),...wrong.map(String)];for(let i=c.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[c[i],c[j]]=[c[j],c[i]]}return{text,choices:c,correct:c.indexOf(String(ans)),explain,visual}}function questionFor(l,k){let a,b,n,ans;switch(l){case 1:a=1+Math.floor(Math.random()*12);b=1+Math.floor(Math.random()*7);if(k%4===0){a=4;b=2;return mk('Satu kue dibagi menjadi 2 bagian sama besar. Satu bagian disebut …','½',['¼','2','1'], 'Setengah berarti satu dari dua bagian yang sama besar.','🍰  →  🍰½ + 🍰½')}if(k%4===1)return mk(`Ada ${a} apel, lalu diberi ${b} lagi. Berapa jumlahnya?`,a+b,[a+b+1,a+b-1,a+b+2],`${a} + ${b} = ${a+b}. Kita gabungkan semua apel!`,'🍎 '.repeat(Math.min(a,5)));if(k%4===2)return mk(`Berapa angka setelah ${a+b}?`,a+b+1,[a+b,a+b+2,a+b+3],`Setelah ${a+b} adalah ${a+b+1}.`);return mk(`${a+b} − ${b} = …`,a,[a+1,a-1,a+2],`Kurangi ${b} dari ${a+b}, hasilnya ${a}.`);
-case 2:a=10+Math.floor(Math.random()*40);b=5+Math.floor(Math.random()*20);if(k%4===0){n=2+Math.floor(Math.random()*10);return mk(`Bilangan ${n} termasuk …`,n%2?'Ganjil':'Genap',['Ganjil dan genap','Genap dan ganjil',n%2?'Genap':'Ganjil'],`Bilangan ${n} ${n%2?'tidak habis dibagi 2, jadi ganjil':'habis dibagi 2, jadi genap'}.`)}if(k%4===1)return mk(`${a} + ${b} = …`,a+b,[a+b+10,a+b-5,a+b+1],`Tambahkan puluhan dan satuan: ${a} + ${b} = ${a+b}.`);if(k%4===2)return mk(`${a} − ${b} = …`,a-b,[a-b+1,a-b-1,a+b],`Kurangi ${b} dari ${a}: hasilnya ${a-b}.`);return mk(`Ada 4 kantong, tiap kantong berisi ${b} kelereng. Jumlahnya …`,4*b,[4*b+2,4*b-4,b+4],`Penjumlahan berulang ${b}+${b}+${b}+${b} = 4 × ${b} = ${4*b}.`);
-case 3:a=2+Math.floor(Math.random()*8);b=2+Math.floor(Math.random()*8);if(k%3===0)return mk(`Manakah yang lebih berat: ${a} kg atau ${b} kg?`,a>b?`${a} kg`:`${b} kg`,[`${a+b} kg`,`${Math.min(a,b)} kg`,'Sama berat'],`Bandingkan angka timbangannya. ${Math.max(a,b)} lebih besar daripada ${Math.min(a,b)}.`,'⚖️');if(k%3===1)return mk(`${a} × 3 = …`,a*3,[a*3+3,a*3-1,a+3],`${a} × 3 berarti ${a} dijumlahkan 3 kali: ${a*3}.`);return mk(`Ibu punya ${a+b} jeruk. ${a} dimakan. Sisa jeruk …`,b,[b+1,b-1,a+b],`${a+b} − ${a} = ${b} jeruk.`,'🍊');
-case 4:a=2+Math.floor(Math.random()*5);b=2+Math.floor(Math.random()*5);if(k%3===0)return mk(`Pecahan ${a}/${b} memiliki pembilang …`,String(a),[String(b),'0','1'],`Pembilang adalah angka di atas garis pecahan, yaitu ${a}.`,'  a / b');if(k%3===1)return mk(`${a}/${b} + 1/${b} = …`,`${a+1}/${b}`,[`${a+2}/${b}`,`${a}/${b+1}`,`${a-1}/${b}`],`Penyebut sama, jumlahkan pembilang: ${a}+1=${a+1}, jadi ${a+1}/${b}.`);return mk(`Luas persegi panjang panjang ${a} cm dan lebar ${b} cm adalah …`,`${a*b} cm²`,[`${a+b} cm²`,`${2*(a+b)} cm²`,`${a*b+1} cm²`],`Luas = panjang × lebar = ${a} × ${b} = ${a*b} cm².`,'▰');
-case 5:a=2+Math.floor(Math.random()*8);b=2+Math.floor(Math.random()*8);if(k%3===0){let d=Math.floor(Math.random()*4)+1;return mk(`Bentuk desimal dari ${d}/10 adalah …`,`0.${d}`,['0.'+(d+1),'1.'+d,'0.0'+d],`${d}/10 berarti ${d} persepuluh, ditulis 0.${d}.`)}if(k%3===1)return mk(`Mobil menempuh ${a*10} km dalam ${a} jam. Kecepatannya …`,`${10} km/jam`,[`${a} km/jam`,`${a*10} km/jam`,`${a+10} km/jam`],`Kecepatan = jarak ÷ waktu = ${a*10} ÷ ${a} = 10 km/jam.`,'🚗');return mk(`Perbandingan 2 : 4 disederhanakan menjadi …`,'1 : 2',['2 : 1','1 : 4','2 : 4'],`Bagi kedua angka dengan 2: 2:4 menjadi 1:2.`);
-default:a=2+Math.floor(Math.random()*9);b=2+Math.floor(Math.random()*8);if(k%3===0)return mk(`Suhu ${a}°C turun ${b}°C. Suhu sekarang …`,`${a-b}°C`,[`${a+b}°C`,`${b-a}°C`,`${a-b+1}°C`],`Turun berarti dikurangi: ${a} − ${b} = ${a-b}°C.`,'🌡️');if(k%3===1)return mk(`${a} + ${b} × 2 = …`,a+b*2,[ (a+b)*2,a*b+b,a+b+2],`Perkalian dikerjakan lebih dahulu: ${b}×2=${b*2}, lalu +${a} = ${a+b*2}.`);return mk(`Dalam kantong ada 1 kelereng merah dan 3 biru. Peluang mengambil merah adalah …`,'1/4',['1/3','3/4','1/2'],'Ada 1 merah dari total 4 kelereng, jadi peluangnya 1/4.','🔴 🔵 🔵 🔵')}}function toast(t){let x=document.querySelector('#toast');x.textContent=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),2300)}render();if(!profile)setTimeout(openLogin,400);
-</script></body></html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#123d35">
+  <meta
+    name="description"
+    content="Game edukasi matematika untuk anak SD kelas 1–6. Latihan operasi bilangan (tambah, kurang, kali, bagi, kurung) bertingkat lewat petualangan interaktif.">
+  <link
+    rel="canonical"
+    href="https://bandungarrysanjoyo.github.io/Sobat-Cendikia/">
+  <title>Sobat Cendikia — Petualangan Angka Pintar</title>
+  <style>
+    @import url('');
+
+    :root {
+      --ink: #28365f;
+      --green: #4766d8;
+      --mint: #e7efff;
+      --gold: #ffc847;
+      --cream: #fffdf6;
+      --coral: #ff786c;
+      --muted: #747c98;
+      --line: #e7e9f4;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: ui-rounded, "Trebuchet MS", system-ui, sans-serif;
+      background-color: #fbfaff;
+      background-image:
+        radial-gradient(#ffcf5940 1.4px, transparent 1.4px),
+        radial-gradient(#9ddfc240 1.4px, transparent 1.4px);
+      background-size: 34px 34px, 42px 42px;
+      background-position: 0 0, 17px 18px;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+      border: 0;
+    }
+
+    .app {
+      max-width: 1120px;
+      margin: auto;
+      padding: 0 24px;
+    }
+
+    .top {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      font-size: 19px;
+    }
+
+    .brandmark {
+      width: 42px;
+      height: 42px;
+      border-radius: 15px;
+      background: linear-gradient(145deg, #ff8b69, #ffbd45);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 24px;
+      box-shadow: 0 6px 0 #ed805252;
+    }
+
+    .brand small {
+      display: block;
+      color: #8588a5;
+      font-size: 10px;
+      letter-spacing: 1.4px;
+    }
+
+    .topright {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .avatar {
+      border-radius: 50%;
+      background: #ffe6ad;
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+    }
+
+    .pill {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 99px;
+      padding: 9px 14px;
+      font-size: 13px;
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .main {
+      padding: 22px 0 65px;
+    }
+
+    .welcome {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 18px 0 28px;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      color: var(--green);
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .welcome h1 {
+      font-size: clamp(29px, 4vw, 44px);
+      line-height: 1.1;
+      margin: 9px 0 10px;
+      letter-spacing: -1.5px;
+    }
+
+    .welcome p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .hero-art {
+      width: 185px;
+      height: 150px;
+      border-radius: 34px;
+      background: linear-gradient(145deg, #c9f4ed, #dcd9ff);
+      box-shadow: 0 8px 0 #d5d6ef;
+      display: grid;
+      place-items: center;
+      font-size: 78px;
+      position: relative;
+      transform: rotate(3deg);
+    }
+
+    .hero-art:before {
+      content: '☁️';
+      position: absolute;
+      left: 13px;
+      bottom: 10px;
+      font-size: 24px;
+    }
+
+    .hero-art:after {
+      content: '✦';
+      position: absolute;
+      right: 20px;
+      top: 10px;
+      color: #ffad32;
+      font-size: 27px;
+      animation: twinkle 1.5s infinite alternate;
+    }
+
+    @keyframes twinkle {
+      to {
+        transform: scale(1.45) rotate(18deg);
+      }
+    }
+
+    .sectionhead {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      margin: 30px 0 15px;
+    }
+
+    .sectionhead h2 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .sectionhead p {
+      margin: 5px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .gate {
+      padding: 17px 20px;
+      border-radius: 19px;
+      margin: 16px 0 12px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border: 2px solid #fff;
+      box-shadow: 0 4px 0 #28365f08;
+      background: linear-gradient(90deg, #fff, #f4f5ff);
+    }
+
+    .gate-icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 14px;
+      background: #e9edff;
+      display: grid;
+      place-items: center;
+      font-size: 24px;
+    }
+
+    .gate h3 {
+      font-size: 15px;
+      margin: 0 0 3px;
+    }
+
+    .gate p {
+      font-size: 12px;
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .levels {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .level {
+      border: 2px solid #fff;
+      box-shadow: 0 5px 0 #28365f0b, 0 10px 24px #5266a20b;
+      background: linear-gradient(145deg, #fff 75%, #f4f2ff);
+      border-radius: 20px;
+      padding: 18px;
+      min-height: 175px;
+      position: relative;
+      transition: 0.2s;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .level:nth-child(3n + 1) {
+      background: linear-gradient(145deg, #fff 72%, #e9f9f1);
+    }
+
+    .level:nth-child(3n + 2) {
+      background: linear-gradient(145deg, #fff 72%, #fff2d8);
+    }
+
+    .level:nth-child(3n) {
+      background: linear-gradient(145deg, #fff 72%, #ffe9e5);
+    }
+
+    .level:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 7px 0 #28365f10, 0 16px 28px #5266a222;
+      border-color: #d9dcff;
+    }
+
+    .leveltop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .levnum {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 900;
+      letter-spacing: 0.8px;
+    }
+
+    .levemoji {
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
+      background: #fff3d2;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 3px 0 #f3dfae;
+      font-size: 26px;
+    }
+
+    .level:nth-child(3n + 2) .levemoji {
+      background: #e5f8ec;
+    }
+
+    .level:nth-child(3n) .levemoji {
+      background: #ffe8e5;
+    }
+
+    .level h3 {
+      margin: 12px 0 5px;
+      font-size: 17px;
+    }
+
+    .level p {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+      margin: 0;
+      max-width: 88%;
+    }
+
+    .stars {
+      margin-top: 12px;
+      color: #edb333;
+      font-size: 15px;
+      letter-spacing: 2px;
+    }
+
+    .cta {
+      margin-top: 14px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .streak {
+      background: #fff2c9;
+      border: 1px solid #f5dda0;
+      padding: 5px 10px;
+      border-radius: 99px;
+      font-weight: 800;
+      font-size: 12px;
+      color: #72531a;
+    }
+
+    .footer {
+      text-align: center;
+      color: #92a097;
+      font-size: 11px;
+      margin-top: 35px;
+    }
+
+    .screen {
+      display: none;
+    }
+
+    .screen.active {
+      display: block;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: clamp(20px, 4vw, 34px);
+      box-shadow: 0 14px 35px #183c3509;
+    }
+
+    .back {
+      background: transparent;
+      color: var(--green);
+      font-weight: 800;
+      padding: 8px 0;
+      margin-bottom: 12px;
+    }
+
+    .quizhead {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .progress {
+      height: 9px;
+      background: #edf1eb;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 10px 0 25px;
+    }
+
+    .progress span {
+      display: block;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, #34c890, #76d8a3, #ffca53);
+      border-radius: 10px;
+      transition: width 0.3s;
+    }
+
+    .question-label {
+      font-weight: 900;
+      color: #92a097;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .question {
+      font-size: clamp(25px, 4vw, 38px);
+      line-height: 1.3;
+      margin: 12px 0 27px;
+      letter-spacing: -0.8px;
+    }
+
+    .visual {
+      font-size: 39px;
+      background: #f3f8ee;
+      border-radius: 18px;
+      padding: 12px 18px;
+      display: inline-block;
+      margin: 0 0 23px;
+    }
+
+    .answers {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .answer {
+      border: 2px solid #ececfa;
+      border-radius: 15px;
+      text-align: left;
+      padding: 16px;
+      font-weight: 800;
+      color: var(--ink);
+      box-shadow: 0 3px 0 #e4e5f2;
+      transition: 0.15s;
+    }
+
+    .answer:hover {
+      border-color: #a9afff;
+      background: #f5f4ff;
+      transform: translateY(-1px);
+    }
+
+    .answer.correct {
+      border-color: #62c88c;
+      background: #e9fff0;
+      box-shadow: 0 3px 0 #b2e4c0;
+    }
+
+    .answer.wrong {
+      border-color: #ff9884;
+      background: #fff1ec;
+      box-shadow: 0 3px 0 #f5c4b7;
+    }
+
+    .feedback {
+      display: none;
+      padding: 15px 17px;
+      border-radius: 15px;
+      margin-top: 18px;
+      line-height: 1.5;
+    }
+
+    .feedback.show {
+      display: block;
+    }
+
+    .feedback.ok {
+      background: #e8f7eb;
+      color: #205c3e;
+    }
+
+    .feedback.no {
+      background: #fff4dd;
+      color: #75551e;
+    }
+
+    .primary {
+      background: linear-gradient(135deg, #5472e9, #785ee8);
+      box-shadow: 0 5px 0 #394bad;
+      color: #fff;
+      padding: 14px 21px;
+      border-radius: 14px;
+      font-weight: 900;
+    }
+
+    .primary:hover {
+      background: linear-gradient(135deg, #4867df, #6950d8);
+      transform: translateY(-1px);
+    }
+
+    .secondary {
+      background: #fff0c9;
+      color: #78551b;
+      box-shadow: 0 4px 0 #f2dfa9;
+      padding: 13px;
+      border-radius: 13px;
+      font-weight: 900;
+    }
+
+    .nextrow {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 16px;
+    }
+
+    .result {
+      text-align: center;
+      padding: 28px 10px;
+    }
+
+    .medal {
+      font-size: 75px;
+    }
+
+    .result h1 {
+      font-size: 34px;
+      margin: 10px 0;
+    }
+
+    .score {
+      font-size: 58px;
+      font-weight: 1000;
+      color: var(--green);
+      line-height: 1;
+    }
+
+    .result p {
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .result-actions {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+    }
+
+    .result-actions button {
+      transition: 0.2s;
+    }
+
+    .result-actions button:hover {
+      transform: translateY(-3px);
+    }
+
+    .reward-wrap {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 50% 0%, #fff0bc 0%, #fff 47%);
+    }
+
+    .reward-wrap:before,
+    .reward-wrap:after {
+      content: '✦  ✧  ✨  ✦  ✧';
+      position: absolute;
+      z-index: -1;
+      color: #ffc847;
+      font-size: 25px;
+      letter-spacing: 17px;
+      white-space: nowrap;
+      animation: drift 7s linear infinite;
+    }
+
+    .reward-wrap:before {
+      top: 20px;
+      left: -15px;
+    }
+
+    .reward-wrap:after {
+      bottom: 35px;
+      right: -18px;
+      color: #79cfaa;
+      animation-direction: reverse;
+    }
+
+    @keyframes drift {
+      to {
+        transform: translateX(28px) rotate(4deg);
+      }
+    }
+
+    .reward-wrap .medal {
+      display: grid;
+      place-items: center;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto 14px;
+      background: linear-gradient(145deg, #fff1b8, #ffe18a);
+      box-shadow: 0 8px 0 #f1c75d, 0 14px 30px #f4c85655;
+      animation: bounce 1.1s ease-in-out infinite alternate;
+    }
+
+    .reward-wrap h1 {
+      color: #455ed0;
+    }
+
+    .reward-wrap .score {
+      color: #ff8b47;
+      text-shadow: 0 3px 0 #ffe0ab;
+    }
+
+    .reward-wrap .primary {
+      padding: 15px 24px;
+    }
+
+    .reward-tag {
+      display: inline-block;
+      background: #e7f8ea;
+      color: #348457;
+      padding: 8px 15px;
+      border-radius: 99px;
+      font-weight: 900;
+      font-size: 13px;
+      margin: 12px 0 2px;
+    }
+
+    .reward-motto {
+      font-weight: 800;
+      color: #596184 !important;
+    }
+
+    @keyframes bounce {
+      to {
+        transform: translateY(-8px) rotate(3deg);
+      }
+    }
+
+    .login-overlay {
+      position: fixed;
+      inset: 0;
+      background: #102c25a8;
+      z-index: 5;
+      display: grid;
+      place-items: center;
+      padding: 18px;
+    }
+
+    .loginbox {
+      width: min(440px, 100%);
+      background: var(--cream);
+      padding: 32px;
+      border-radius: 26px;
+      box-shadow: 0 30px 70px #0003;
+    }
+
+    .loginbox h1 {
+      font-size: 29px;
+      margin: 13px 0 8px;
+    }
+
+    .loginbox p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .field {
+      display: block;
+      margin: 13px 0;
+    }
+
+    .field span {
+      display: block;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .field input {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #dfe7db;
+      border-radius: 12px;
+      background: white;
+      outline-color: #5aa87a;
+    }
+
+    .login-buttons {
+      display: grid;
+      gap: 9px;
+      margin-top: 17px;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #435bd0;
+      box-shadow: 0 5px 18px #435bd055;
+      color: #fff;
+      padding: 11px 17px;
+      border-radius: 12px;
+      display: none;
+      z-index: 9;
+    }
+
+    .toast.show {
+      display: block;
+    }
+
+    .doodle-strip {
+      height: 112px;
+      border-radius: 23px;
+      overflow: hidden;
+      margin: -3px 0 27px;
+      border: 3px solid white;
+      box-shadow: 0 5px 0 #28365f0b, 0 9px 22px #5266a20c;
+      background: #fff;
+    }
+
+    .doodle-strip img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 47%;
+    }
+
+    .question.story {
+      font-size: clamp(18px, 2.7vw, 24px);
+      line-height: 1.6;
+      letter-spacing: 0;
+      font-weight: 700;
+    }
+
+    .question-label.story {
+      color: #ff8b47;
+    }
+
+    .fx-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .reward-wrap > *:not(.fx-canvas) {
+      position: relative;
+      z-index: 1;
+    }
+
+    .result .praise {
+      display: inline-block;
+      max-width: 540px;
+      margin: 14px auto 4px;
+      padding: 12px 20px;
+      border-radius: 20px;
+      background: #fff6d6;
+      border: 2px dashed #ffc847;
+      color: #455ed0;
+      font-size: clamp(17px, 2.6vw, 21px);
+      font-weight: 900;
+      line-height: 1.4;
+      animation: popin 0.6s cubic-bezier(0.2, 1.4, 0.4, 1) both;
+    }
+
+    .praise .pname {
+      color: #ff6a4d;
+      text-shadow: 0 2px 0 #ffe0ab;
+    }
+
+    @keyframes popin {
+      from {
+        transform: scale(0.6);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .flappy {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 56px;
+      height: 45px;
+      display: none;
+      pointer-events: none;
+      z-index: 4;
+      will-change: transform;
+      filter: drop-shadow(0 4px 4px #28365f30);
+    }
+
+    @media (max-width: 600px) {
+      .flappy {
+        width: 44px;
+        height: 36px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .result .praise {
+        animation: none;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .app {
+        padding: 0 17px;
+      }
+      .hero-art {
+        width: 115px;
+        height: 110px;
+        font-size: 57px;
+        border-radius: 27px;
+      }
+      .welcome {
+        align-items: center;
+      }
+      .welcome p {
+        max-width: 230px;
+        line-height: 1.5;
+      }
+      .levels {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      .level {
+        padding: 14px;
+        min-height: 180px;
+      }
+      .top {
+        height: 68px;
+      }
+      .pill {
+        padding: 8px 11px;
+      }
+      .answers {
+        grid-template-columns: 1fr;
+      }
+      .sectionhead {
+        margin-top: 25px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .reward-wrap .medal {
+        width: 100px;
+        height: 100px;
+        font-size: 64px;
+      }
+      .hero-art {
+        box-shadow: 0 5px 0 #d5d6ef;
+      }
+      .doodle-strip {
+        height: 76px;
+        border-radius: 17px;
+        margin-bottom: 22px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .hero-art {
+        display: none;
+      }
+      .levels {
+        grid-template-columns: 1fr 1fr;
+      }
+      .level h3 {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <div class="brand">
+        <div class="brandmark">✦</div>
+        <div>
+          Sobat Cendikia
+          <small>PETUALANGAN ANGKA PINTAR</small>
+        </div>
+      </div>
+      <div class="topright">
+        <span class="streak">🌟 <b id="totalStars">0</b></span>
+        <button id="profile" class="pill" onclick="openLogin()">
+          👤 <span id="userLabel">Masuk</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section id="home" class="screen active">
+        <div class="welcome">
+          <div>
+            <div class="eyebrow">Assalamu'alaikum, Sobat! 👋</div>
+            <h1>Siap berpetualang<br>hari ini?</h1>
+            <p>Pilih pulau belajar dan taklukkan tantangan angka!</p>
+          </div>
+          <div class="hero-art">🧭</div>
+        </div>
+
+        <div class="doodle-strip" aria-label="Ornamen ceria Sobat Cendikia">
+          <img
+            src="doodles.png"
+            alt="Ornamen pelangi, bintang, pensil, dan angka yang ceria">
+        </div>
+
+        <div class="sectionhead">
+          <div>
+            <h2>Peta Petualangan</h2>
+            <p>Enam pulau, banyak ilmu baru menanti.</p>
+          </div>
+        </div>
+
+        <div class="gate">
+          <div class="gate-icon">🌱</div>
+          <div>
+            <h3>Gerbang A · Cendikia Cilik</h3>
+            <p>Kelas 1–3 · Operasi bilangan dari 2 sampai 5 suku, makin menantang</p>
+          </div>
+        </div>
+        <div class="levels" id="junior"></div>
+
+        <div class="gate">
+          <div class="gate-icon">🚀</div>
+          <div>
+            <h3>Gerbang B · Ekspedisi Cendikia Utama</h3>
+            <p>Kelas 4–6 · Operasi campuran, kurung, dan bilangan negatif</p>
+          </div>
+        </div>
+        <div class="levels" id="senior"></div>
+
+        <div class="footer">
+          Belajar dengan tekun, jujur, dan gembira ✨
+        </div>
+      </section>
+
+      <section id="game" class="screen">
+        <button class="back" onclick="goHome()">← Kembali ke peta</button>
+        <div class="card">
+          <div class="quizhead">
+            <div>
+              <div class="eyebrow" id="gameLevel">PULAU 1</div>
+              <div style="font-weight:900;margin-top:4px" id="topic">
+                Misi Matematika
+              </div>
+            </div>
+            <span class="streak">
+              ✨ <span id="sessionScore">0</span> poin
+            </span>
+          </div>
+          <div class="progress"><span id="bar"></span></div>
+          <div class="question-label" id="qCount">SOAL 1 DARI 10</div>
+          <div class="question" id="question"></div>
+          <div id="visual" class="visual" style="display:none"></div>
+          <div class="answers" id="answers"></div>
+          <div id="feedback" class="feedback"></div>
+          <div class="nextrow">
+            <button
+              class="primary"
+              id="next"
+              style="display:none"
+              onclick="nextQuestion()">
+              Lanjutkan →
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="result" class="screen">
+        <button class="back" onclick="goHome()">← Kembali ke peta</button>
+        <div class="card result reward-wrap">
+          <canvas id="pileCv" class="fx-canvas" style="z-index:0" aria-hidden="true"></canvas>
+          <canvas id="fallCv" class="fx-canvas" style="z-index:2" aria-hidden="true"></canvas>
+          <div id="medal" class="medal">🏅</div>
+          <div class="eyebrow">MISI SELESAI</div>
+          <h1 id="resultTitle">Masya Allah!</h1>
+          <div class="score">
+            <span id="finalScore">0</span>
+            <small style="font-size:25px">%</small>
+          </div>
+          <div id="praise" class="praise"></div>
+          <p id="resultDesc"></p>
+          <div class="result-actions">
+            <button class="primary" onclick="startLevel(currentLevel)">
+              Main lagi ↻
+            </button>
+            <button class="secondary" onclick="goHome()">
+              Pilih pulau lain
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="loginOverlay" class="login-overlay" style="display:none">
+    <div class="loginbox">
+      <div class="brand">
+        <div class="brandmark">✦</div>
+        <div>
+          Sobat Cendikia
+          <small>SELAMAT DATANG, SOBAT!</small>
+        </div>
+      </div>
+      <h1>Mulai petualanganmu</h1>
+      <p>
+        Masuk sebagai tamu untuk langsung bermain, atau isi nama agar sapaan
+        jadi lebih akrab.
+      </p>
+      <label class="field">
+        <span>Nama panggilan</span>
+        <input
+          id="nameInput"
+          placeholder="Contoh: Aisyah"
+          maxlength="24">
+      </label>
+      <label class="field">
+        <span>
+          Nama sekolah
+          <small style="font-weight:400;color:#829087">(opsional)</small>
+        </span>
+        <input id="schoolInput" placeholder="Nama sekolahmu">
+      </label>
+      <div class="login-buttons">
+        <button class="primary" onclick="saveProfile()">
+          Simpan & mulai bermain
+        </button>
+        <button class="secondary" onclick="guest()">
+          Lanjut sebagai tamu
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <svg id="bird" class="flappy" viewBox="0 0 60 48" aria-hidden="true">
+    <ellipse cx="30" cy="26" rx="22" ry="18" fill="#ffd84a" stroke="#5b3a16" stroke-width="3"/>
+    <ellipse cx="32" cy="34" rx="13" ry="7" fill="#fff1a8"/>
+    <g id="birdWing" style="transform-origin:20px 30px">
+      <ellipse cx="19" cy="30" rx="11" ry="7" fill="#fff7d1" stroke="#5b3a16" stroke-width="2.5"/>
+    </g>
+    <circle cx="40" cy="18" r="8" fill="#fff" stroke="#5b3a16" stroke-width="2.5"/>
+    <circle cx="42.5" cy="18.5" r="3.5" fill="#28365f"/>
+    <rect x="44" y="26" width="15" height="9" rx="4.5" fill="#ff8a3d" stroke="#5b3a16" stroke-width="2.5"/>
+    <path d="M46 31 H57" stroke="#e0412f" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const levels = [
+      {
+        name: 'Angka di Taman',
+        emoji: '🌳',
+        topic: 'Tambah & kurang · 2–3 bilangan · soal cerita',
+        gate: 'Cendikia Cilik'
+      },
+      {
+        name: 'Pasar Ceria',
+        emoji: '🍉',
+        topic: 'Tambah, kurang, kali · 2–4 bilangan · soal cerita',
+        gate: 'Cendikia Cilik'
+      },
+      {
+        name: 'Pulau Timbangan',
+        emoji: '⚖️',
+        topic: 'Empat operasi · urutan pengerjaan · soal cerita',
+        gate: 'Cendikia Cilik'
+      },
+      {
+        name: 'Labirin Kurung',
+        emoji: '🧩',
+        topic: 'Operasi campuran · tanda kurung · soal cerita',
+        gate: 'Cendikia Utama'
+      },
+      {
+        name: 'Ekspedisi Angka',
+        emoji: '🗺️',
+        topic: 'Bilangan besar · dua kurung · soal cerita',
+        gate: 'Cendikia Utama'
+      },
+      {
+        name: 'Arena Cendikia',
+        emoji: '🏆',
+        topic: 'Bilangan negatif · suhu & utang · soal cerita',
+        gate: 'Cendikia Utama'
+      }
+    ];
+
+    let store = JSON.parse(localStorage.getItem('sc-progress') || '{}');
+    let profile = JSON.parse(localStorage.getItem('sc-profile') || 'null');
+    let currentLevel = 1;
+    let questions = [];
+    let qi = 0;
+    let correct = 0;
+    let locked = false;
+
+    function render() {
+      document.querySelector('#junior').innerHTML = levels
+        .slice(0, 3)
+        .map((x, i) => tile(x, i))
+        .join('');
+      document.querySelector('#senior').innerHTML = levels
+        .slice(3)
+        .map((x, i) => tile(x, i + 3))
+        .join('');
+      document.querySelector('#totalStars').textContent = Object.values(store)
+        .reduce((a, b) => a + (b.stars || 0), 0);
+      document.querySelector('#userLabel').textContent =
+        profile?.name || 'Masuk';
+    }
+
+    function tile(x, i) {
+      let s = store[i + 1]?.stars || 0;
+      let scoreText = s
+        ? 'Terbaik ' + (store[i + 1].best || 0) + '%'
+        : 'Ayo mulai!';
+      return `
+        <article class="level" onclick="startLevel(${i + 1})">
+          <div class="leveltop">
+            <span class="levnum">PULAU ${i + 1}</span>
+            <span class="levemoji">${x.emoji}</span>
+          </div>
+          <h3>${x.name}</h3>
+          <p>${x.topic}</p>
+          <div class="stars">
+            ${'★'.repeat(s)}${'☆'.repeat(3 - s)}
+            <span style="font-size:11px;color:#829087;letter-spacing:0">
+              ${scoreText}
+            </span>
+          </div>
+          <div class="cta">JELAJAHI PULAU →</div>
+        </article>`;
+    }
+
+    function openLogin() {
+      document.querySelector('#loginOverlay').style.display = 'grid';
+      if (profile) {
+        document.querySelector('#nameInput').value = profile.name;
+        document.querySelector('#schoolInput').value = profile.school || '';
+      }
+    }
+
+    function saveProfile() {
+      let n = document.querySelector('#nameInput').value.trim();
+      if (!n) {
+        toast('Isi nama panggilan dulu ya 😊');
+        return;
+      }
+      profile = {
+        name: n,
+        school: document.querySelector('#schoolInput').value.trim()
+      };
+      localStorage.setItem('sc-profile', JSON.stringify(profile));
+      document.querySelector('#loginOverlay').style.display = 'none';
+      render();
+      toast(`Selamat datang, ${n}!`);
+    }
+
+    function guest() {
+      profile = { name: 'Sobat' };
+      localStorage.setItem('sc-profile', JSON.stringify(profile));
+      document.querySelector('#loginOverlay').style.display = 'none';
+      render();
+    }
+
+    function startLevel(n) {
+      currentLevel = n;
+      const historyKey = `sc-last-questions-${n}`;
+      const previous = JSON.parse(localStorage.getItem(historyKey) || '[]');
+      questions = makeQuestions(n);
+
+      for (
+        let attempt = 0;
+        attempt < 20 &&
+        JSON.stringify(questions.map(q => q.text).sort()) ===
+          JSON.stringify(previous.slice().sort());
+        attempt++
+      ) {
+        questions = makeQuestions(n);
+      }
+
+      localStorage.setItem(
+        historyKey,
+        JSON.stringify(questions.map(q => q.text))
+      );
+      qi = 0;
+      correct = 0;
+      show('game');
+      document.querySelector('#gameLevel').textContent =
+        `PULAU ${n} · ${levels[n - 1].name.toUpperCase()}`;
+      document.querySelector('#topic').textContent = levels[n - 1].topic;
+      renderQ();
+    }
+
+    function show(id) {
+      if (id !== 'result') stopFx();
+      document.querySelectorAll('.screen').forEach(x => {
+        x.classList.remove('active');
+      });
+      document.querySelector('#' + id).classList.add('active');
+      window.scrollTo(0, 0);
+    }
+
+    function goHome() {
+      render();
+      show('home');
+    }
+
+    function renderQ() {
+      locked = false;
+      let q = questions[qi];
+      const lab = document.querySelector('#qCount');
+      lab.textContent = `SOAL ${qi + 1} DARI ${questions.length}` +
+        (q.story ? ' · SOAL CERITA 📖' : '');
+      lab.classList.toggle('story', !!q.story);
+      document.querySelector('#question').classList.toggle('story', !!q.story);
+      document.querySelector('#bar').style.width =
+        `${(qi / questions.length) * 100}%`;
+      document.querySelector('#question').textContent = q.text;
+      document.querySelector('#sessionScore').textContent = correct * 10;
+
+      let v = document.querySelector('#visual');
+      v.style.display = q.visual ? 'inline-block' : 'none';
+      v.textContent = q.visual || '';
+
+      let a = document.querySelector('#answers');
+      a.innerHTML = q.choices
+        .map(
+          (x, i) =>
+            `<button class="answer" onclick="answer(${i})">` +
+            `${String.fromCharCode(65 + i)}. &nbsp;${x}</button>`
+        )
+        .join('');
+
+      let f = document.querySelector('#feedback');
+      f.className = 'feedback';
+      document.querySelector('#next').style.display = 'none';
+    }
+
+    function answer(i) {
+      if (locked) return;
+      locked = true;
+      let q = questions[qi];
+      let buttons = [...document.querySelectorAll('.answer')];
+      buttons[q.correct].classList.add('correct');
+
+      let ok = i === q.correct;
+      if (ok) {
+        correct++;
+      } else {
+        buttons[i].classList.add('wrong');
+      }
+
+      let f = document.querySelector('#feedback');
+      f.className = 'feedback show ' + (ok ? 'ok' : 'no');
+      let titleMsg = ok
+        ? 'Hebat, jawabanmu tepat! ✨'
+        : 'Tidak apa-apa, kita belajar bersama 🌱';
+      f.innerHTML = `<b>${titleMsg}</b><br>${q.explain}`;
+
+      document.querySelector('#sessionScore').textContent = correct * 10;
+      let nextBtn = document.querySelector('#next');
+      nextBtn.style.display = 'inline-block';
+      nextBtn.textContent =
+        qi === questions.length - 1 ? 'Lihat hasil →' : 'Lanjutkan →';
+    }
+
+    function nextQuestion() {
+      if (++qi >= questions.length) {
+        finish();
+        return;
+      }
+      renderQ();
+    }
+
+    function finish() {
+      let score = correct * 10;
+      let old = store[currentLevel] || { best: 0, stars: 0 };
+      let stars = score >= 85 ? 3 : score >= 70 ? 2 : score >= 55 ? 1 : 0;
+      store[currentLevel] = {
+        best: Math.max(old.best, score),
+        score,
+        stars: Math.max(old.stars, stars)
+      };
+      localStorage.setItem('sc-progress', JSON.stringify(store));
+
+      let title =
+        score >= 85
+          ? 'Cendikia Mahir · Mumtaz'
+          : score >= 70
+          ? 'Cendikia Cakap · Jayyid Jiddan'
+          : score >= 55
+          ? 'Cendikia Berkembang · Maqbul'
+          : 'Sahabat Belajar';
+
+      document.querySelector('#medal').textContent =
+        score >= 85 ? '🏅' : score >= 55 ? '🥈' : '🌱';
+      const who = (profile && profile.name) || 'Sobat';
+      document.querySelector('#resultTitle').textContent =
+        score >= 85
+          ? `Masya Allah, luar biasa, ${who}!`
+          : score >= 55
+          ? `Terus berusaha, ${who}!`
+          : `Ayo coba lagi, ${who}, kamu pasti bisa!`;
+      document.querySelector('#finalScore').textContent = score;
+
+      let praise = praiseFor(score, who);
+      if (score >= 70 && profile && profile.school) {
+        praise += `<br><small>Kebanggaan ${esc(profile.school)}! 🎉</small>`;
+      }
+      document.querySelector('#praise').innerHTML = praise;
+
+      let motto =
+        score >= 85
+          ? 'Kamu menguasai misi ini dengan cerdas dan teliti! Luar biasa!'
+          : score >= 55
+          ? 'Ketelitianmu makin baik. Setiap latihan membuatmu lebih hebat!'
+          : 'Kamu sudah berani mencoba, itu hebat! Yuk latihan lagi, Sobat!';
+
+      document.querySelector('#resultDesc').innerHTML = `
+        <span class="reward-tag">${title}</span><br>
+        <b>${correct} dari ${questions.length} jawaban benar</b> &nbsp;
+        ${'⭐'.repeat(stars) || '✨'}
+        <p class="reward-motto">
+          ${motto}<br>
+          Semangat belajar, satu langkah lagi menuju petualangan baru!
+        </p>
+        <i>“Sebaik-baik kalian adalah yang belajar dan mengajarkan ilmu.”</i>`;
+      show('result');
+      startFx(score);
+    }
+
+    /* ====== Generator soal operasi bilangan (2–5 operand) ====== */
+    const LEVEL_CFG = {
+      1: { counts: [2, 2, 2, 2, 2, 2, 3, 3, 3, 3], ops: ['+', '−'],
+           add: [2, 12], mul: [2, 5], dmax: 9, cap: 20,
+           paren: 0, two: 0, neg: false },
+      2: { counts: [2, 2, 3, 3, 3, 3, 3, 4, 4, 4], ops: ['+', '−', '×', '×'],
+           add: [5, 40], mul: [2, 5], dmax: 9, cap: 100,
+           paren: 0, two: 0, neg: false },
+      3: { counts: [3, 3, 3, 3, 4, 4, 4, 4, 5, 5], ops: ['+', '−', '×', '÷'],
+           add: [10, 60], mul: [2, 9], dmax: 9, cap: 200,
+           paren: 0.35, two: 0, neg: false },
+      4: { counts: [3, 3, 4, 4, 4, 4, 5, 5, 5, 5], ops: ['+', '−', '×', '÷'],
+           add: [10, 150], mul: [2, 12], dmax: 12, cap: 500,
+           paren: 0.65, two: 0.15, neg: false },
+      5: { counts: [3, 4, 4, 4, 4, 5, 5, 5, 5, 5], ops: ['+', '−', '×', '÷'],
+           add: [20, 400], mul: [3, 15], dmax: 12, cap: 2000,
+           paren: 0.85, two: 0.35, neg: false },
+      6: { counts: [4, 4, 4, 4, 5, 5, 5, 5, 5, 5], ops: ['+', '−', '×', '÷'],
+           add: [10, 200], mul: [2, 12], dmax: 12, cap: 1000,
+           paren: 0.95, two: 0.45, neg: true, negOp: 0.25 }
+    };
+
+    function rnd(lo, hi) {
+      return lo + Math.floor(Math.random() * (hi - lo + 1));
+    }
+
+    function pick(arr) {
+      return arr[Math.floor(Math.random() * arr.length)];
+    }
+
+    function shuffle(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    function fmtNum(x) {
+      return x < 0 ? '−' + -x : String(x);
+    }
+
+    /* Token = angka (number) atau '+', '−', '×', '÷', '(', ')' */
+    function fmtTokens(tokens) {
+      let s = '';
+      let space = false;
+      tokens.forEach((t, i) => {
+        if (t === '(') {
+          s += (space ? ' ' : '') + '(';
+          space = false;
+        } else if (t === ')') {
+          s += ')';
+          space = true;
+        } else if (typeof t === 'number') {
+          const bare = i === 0 || tokens[i - 1] === '(';
+          const piece = t < 0 ? (bare ? fmtNum(t) : '(' + fmtNum(t) + ')') : String(t);
+          s += (space ? ' ' : '') + piece;
+          space = true;
+        } else {
+          s += ' ' + t;
+          space = true;
+        }
+      });
+      return s;
+    }
+
+    function applyOp(l, op, r, cfg) {
+      let v;
+      if (op === '+') v = l + r;
+      else if (op === '−') v = l - r;
+      else if (op === '×') v = l * r;
+      else {
+        if (r === 0 || l % r !== 0) throw new Error('bagi');
+        v = l / r;
+      }
+      if (v === 0) v = 0;
+      if (!cfg.neg && v < 0) throw new Error('negatif');
+      if (Math.abs(v) > cfg.cap) throw new Error('terlalu besar');
+      return v;
+    }
+
+    function stripSingles(tokens) {
+      let t = tokens;
+      let changed = true;
+      while (changed) {
+        changed = false;
+        for (let i = 0; i + 2 < t.length; i++) {
+          if (t[i] === '(' && typeof t[i + 1] === 'number' && t[i + 2] === ')') {
+            t = t.slice(0, i).concat([t[i + 1]], t.slice(i + 3));
+            changed = true;
+            break;
+          }
+        }
+      }
+      return t;
+    }
+
+    /* Satu langkah: kurung terdalam dulu, lalu × ÷, lalu + − (kiri ke kanan) */
+    function reduceOnce(tokens, cfg) {
+      let open = -1;
+      let close = -1;
+      for (let i = 0; i < tokens.length; i++) {
+        if (tokens[i] === '(') open = i;
+        else if (tokens[i] === ')') { close = i; break; }
+      }
+      let lo = 0;
+      let hi = tokens.length - 1;
+      if (open >= 0) { lo = open + 1; hi = close - 1; }
+      let idx = -1;
+      for (let i = lo; i <= hi; i++) {
+        if (tokens[i] === '×' || tokens[i] === '÷') { idx = i; break; }
+      }
+      if (idx < 0) {
+        for (let i = lo; i <= hi; i++) {
+          if (tokens[i] === '+' || tokens[i] === '−') { idx = i; break; }
+        }
+      }
+      if (idx < 0) return null;
+      const v = applyOp(tokens[idx - 1], tokens[idx], tokens[idx + 1], cfg);
+      return tokens.slice(0, idx - 1).concat([v], tokens.slice(idx + 2));
+    }
+
+    function evalSteps(tokens, cfg) {
+      const steps = [];
+      let cur = tokens;
+      for (;;) {
+        let nxt = reduceOnce(cur, cfg);
+        if (!nxt) break;
+        nxt = stripSingles(nxt);
+        steps.push(nxt);
+        cur = nxt;
+      }
+      if (cur.length !== 1) throw new Error('tidak selesai');
+      return { value: cur[0], steps };
+    }
+
+    /* Nilai jika kurung diabaikan (kesalahan umum siswa) */
+    function plainValue(tokens, cfg) {
+      const t = tokens.filter(x => x !== '(' && x !== ')');
+      try {
+        return evalSteps(t, { neg: true, cap: 1e9 }).value;
+      } catch (e) {
+        return null;
+      }
+    }
+
+    /* Nilai jika dikerjakan murni kiri ke kanan (kesalahan umum siswa) */
+    function leftToRight(tokens) {
+      const t = tokens.filter(x => x !== '(' && x !== ')');
+      let v = t[0];
+      for (let i = 1; i < t.length; i += 2) {
+        const op = t[i];
+        const r = t[i + 1];
+        if (op === '+') v += r;
+        else if (op === '−') v -= r;
+        else if (op === '×') v *= r;
+        else {
+          if (r === 0 || v % r !== 0) return null;
+          v /= r;
+        }
+      }
+      return v;
+    }
+
+    function genTokens(n, cfg) {
+      const ops = [];
+      for (let i = 0; i < n - 1; i++) ops.push(pick(cfg.ops));
+      const nums = [];
+      let term = 0;
+      for (let i = 0; i < n; i++) {
+        const prev = i > 0 ? ops[i - 1] : '+';
+        const next = ops[i];
+        let v;
+        if (prev === '÷') {
+          const ds = [];
+          for (let d = 2; d <= cfg.dmax; d++) if (term % d === 0) ds.push(d);
+          if (!ds.length) return null;
+          v = pick(ds);
+          term = term / v;
+        } else if (prev === '×') {
+          v = rnd(cfg.mul[0], cfg.mul[1]);
+          if (cfg.neg && Math.random() < cfg.negOp) v = -v;
+          term *= v;
+        } else {
+          if (next === '÷') v = rnd(2, cfg.dmax) * rnd(2, cfg.dmax);
+          else v = rnd(cfg.add[0], cfg.add[1]);
+          if (cfg.neg && Math.random() < cfg.negOp) v = -v;
+          term = v;
+        }
+        nums.push(v);
+      }
+
+      let groups = [];
+      if (n >= 3 && Math.random() < cfg.paren) {
+        if (n >= 4 && Math.random() < cfg.two) {
+          groups = n === 4
+            ? [[0, 1], [2, 3]]
+            : pick([[[0, 1], [3, 4]], [[0, 1], [2, 3]], [[1, 2], [3, 4]]]);
+        } else {
+          const len = rnd(2, n - 1);
+          const s = rnd(0, n - len);
+          groups = [[s, s + len - 1]];
+        }
+      }
+
+      const tokens = [];
+      for (let i = 0; i < n; i++) {
+        if (groups.some(g => g[0] === i)) tokens.push('(');
+        tokens.push(nums[i]);
+        if (groups.some(g => g[1] === i)) tokens.push(')');
+        if (i < n - 1) tokens.push(ops[i]);
+      }
+      return { tokens, hasParen: groups.length > 0 };
+    }
+
+    function makeExpr(n, cfg) {
+      for (let attempt = 0; attempt < 500; attempt++) {
+        const g = genTokens(n, cfg);
+        if (!g) continue;
+        let res;
+        try {
+          res = evalSteps(g.tokens, cfg);
+        } catch (e) {
+          continue;
+        }
+        if (res.value === 0 && Math.random() < 0.8) continue;
+        if (g.hasParen) {
+          const pv = plainValue(g.tokens, cfg);
+          if (pv === res.value && Math.random() > 0.2) continue;
+        }
+        return { tokens: g.tokens, res, hasParen: g.hasParen };
+      }
+      return null;
+    }
+
+    function makeDistractors(tokens, value, cfg) {
+      const out = [];
+      const add = x => {
+        if (
+          x !== null && Number.isInteger(x) && x !== value &&
+          !out.includes(x) && (cfg.neg || x >= 0)
+        ) out.push(x);
+      };
+      shuffle([leftToRight(tokens), plainValue(tokens, cfg)]).forEach(add);
+      if (cfg.neg) add(-value);
+      const deltas = shuffle([1, -1, 2, -2, 10, -10, 3, -3, 5, -5, 4, -4, 20, -20]);
+      for (const d of deltas) {
+        if (out.length >= 3) break;
+        add(value + d);
+      }
+      for (let k = 1; out.length < 3; k++) add(value + 20 + k);
+      return out.slice(0, 3);
+    }
+
+    function explainExpr(tokens, res, hasParen) {
+      const hasMD = tokens.includes('×') || tokens.includes('÷');
+      const hasAS = tokens.includes('+') || tokens.includes('−');
+      let hint;
+      if (hasParen) {
+        hint = 'Kerjakan dulu yang di dalam kurung, lalu × dan ÷, terakhir + dan −.';
+      } else if (hasMD && hasAS) {
+        hint = 'Kerjakan × dan ÷ lebih dulu, baru + dan − dari kiri ke kanan.';
+      } else {
+        hint = 'Kerjakan dari kiri ke kanan.';
+      }
+      const lines = [fmtTokens(tokens)];
+      res.steps.forEach(s => lines.push('= ' + fmtTokens(s)));
+      return `<i>${hint}</i><br>${lines.join('<br>')}`;
+    }
+
+    function mk(text, ans, wrong, explain, visual = '') {
+      let c = [String(ans), ...wrong.map(String)];
+      shuffle(c);
+      return {
+        text,
+        choices: c,
+        correct: c.indexOf(String(ans)),
+        explain,
+        visual
+      };
+    }
+
+    /* ====== Soal cerita: cerita → ekspresi matematika ====== */
+    const NAMES = [
+      'Aisyah', 'Budi', 'Citra', 'Dimas', 'Eka', 'Fajar', 'Gita', 'Hasan',
+      'Intan', 'Joko', 'Kirana', 'Lukman', 'Maya', 'Nabil', 'Putri', 'Rafi',
+      'Salsa', 'Tegar'
+    ];
+
+    /* em = emoji, u = satuan jawaban, gen = angka acak, ex = token ekspresi,
+       tx = teks cerita. Ekspresi dicek oleh evalSteps (bilangan bulat, tidak
+       negatif kecuali level 6, tidak melebihi batas level). */
+    const STORY = {
+      1: [
+        { em: '🍎', u: 'apel',
+          gen: () => ({ a: rnd(3, 12), b: rnd(2, 8) }),
+          ex: v => [v.a, '+', v.b],
+          tx: v => `${v.n} punya ${v.a} apel. Ibunya memberi ${v.b} apel lagi. Berapa apel ${v.n} sekarang?` },
+        { em: '🎈', u: 'balon',
+          gen: () => ({ a: rnd(8, 20), b: rnd(2, 7) }),
+          ex: v => [v.a, '−', v.b],
+          tx: v => `Ada ${v.a} balon di pesta ulang tahun ${v.n}. Sebanyak ${v.b} balon meletus. Berapa balon yang masih utuh?` },
+        { em: '🐟', u: 'ikan',
+          gen: () => ({ a: rnd(2, 7), b: rnd(2, 7), c: rnd(2, 6) }),
+          ex: v => [v.a, '+', v.b, '+', v.c],
+          tx: v => `Di kolam ada ${v.a} ikan mas, ${v.b} ikan koi, dan ${v.c} ikan lele. Berapa jumlah semua ikan di kolam?` },
+        { em: '🍬', u: 'permen',
+          gen: () => ({ a: rnd(5, 10), b: rnd(3, 8), c: rnd(2, 7) }),
+          ex: v => [v.a, '+', v.b, '−', v.c],
+          tx: v => `${v.n} punya ${v.a} permen. Ia mendapat ${v.b} permen dari kakaknya, lalu memakan ${v.c} permen. Berapa permen ${v.n} sekarang?` },
+        { em: '📚', u: 'buku',
+          gen: () => ({ a: rnd(10, 16), b: rnd(3, 8), c: rnd(1, 6) }),
+          ex: v => [v.a, '−', v.b, '+', v.c],
+          tx: v => `Perpustakaan kelas punya ${v.a} buku cerita. Sebanyak ${v.b} buku dipinjam, lalu ${v.c} buku dikembalikan. Berapa buku cerita di rak sekarang?` },
+        { em: '⚽', u: 'bola',
+          gen: () => ({ a: rnd(12, 20), b: rnd(2, 6), c: rnd(2, 6) }),
+          ex: v => [v.a, '−', v.b, '−', v.c],
+          tx: v => `${v.n} membawa ${v.a} bola ke lapangan. Ia memberikan ${v.b} bola kepada tim biru dan ${v.c} bola kepada tim merah. Berapa bola yang masih dipegang ${v.n}?` }
+      ],
+
+      2: [
+        { em: '🍊', u: 'jeruk',
+          gen: () => ({ a: rnd(3, 9), b: rnd(3, 9) }),
+          ex: v => [v.a, '×', v.b],
+          tx: v => `Ibu ${v.n} membeli ${v.a} kantong jeruk. Setiap kantong berisi ${v.b} jeruk. Berapa jumlah jeruk seluruhnya?` },
+        { em: '🥚', u: 'butir telur',
+          gen: () => ({ a: rnd(3, 8), b: rnd(4, 9), c: rnd(3, 20) }),
+          ex: v => [v.a, '×', v.b, '+', v.c],
+          tx: v => `${v.n} menata ${v.a} rak telur, tiap rak memuat ${v.b} butir. Lalu ia menambah ${v.c} butir lagi. Berapa butir telur seluruhnya?` },
+        { em: '🍪', u: 'kue',
+          gen: () => ({ a: rnd(4, 9), b: rnd(5, 9), c: rnd(5, 30) }),
+          ex: v => [v.a, '×', v.b, '−', v.c],
+          tx: v => `Toko kue membuat ${v.a} loyang kue, tiap loyang berisi ${v.b} kue. Sebanyak ${v.c} kue sudah terjual. Berapa kue yang tersisa?` },
+        { em: '📘', u: 'buku',
+          gen: () => ({ a: rnd(10, 30), b: rnd(2, 6), c: rnd(3, 9) }),
+          ex: v => [v.a, '+', v.b, '×', v.c],
+          tx: v => `Di rak ada ${v.a} buku. ${v.n} menaruh ${v.b} tumpuk buku baru, tiap tumpuk berisi ${v.c} buku. Berapa buku di rak sekarang?` },
+        { em: '🌳', u: 'pohon',
+          gen: () => ({ a: rnd(2, 6), b: rnd(3, 8), c: rnd(2, 6), d: rnd(3, 8) }),
+          ex: v => [v.a, '×', v.b, '+', v.c, '×', v.d],
+          tx: v => `Kebun sekolah punya ${v.a} baris pohon mangga, tiap baris ${v.b} pohon. Ada juga ${v.c} baris pohon jambu, tiap baris ${v.d} pohon. Berapa jumlah semua pohon?` },
+        { em: '🚌', u: 'anak',
+          gen: () => ({ a: rnd(4, 7), b: rnd(8, 12), c: rnd(3, 12), d: rnd(3, 12) }),
+          ex: v => [v.a, '×', v.b, '−', v.c, '−', v.d],
+          tx: v => `Ada ${v.a} bus wisata, tiap bus membawa ${v.b} anak. Di halte pertama turun ${v.c} anak dan di halte kedua turun ${v.d} anak. Berapa anak yang masih di dalam bus?` },
+        { em: '✏️', u: 'pensil',
+          gen: () => ({ a: rnd(3, 6), b: rnd(4, 8), c: rnd(2, 10), d: rnd(1, 8) }),
+          ex: v => [v.a, '×', v.b, '+', v.c, '−', v.d],
+          tx: v => `${v.n} membeli ${v.a} paket pensil, tiap paket berisi ${v.b} pensil. Temannya memberi ${v.c} pensil, tetapi ${v.d} pensil patah. Berapa pensil yang masih bagus?` }
+      ],
+
+      3: [
+        { em: '🔮', u: 'kelereng',
+          gen: () => {
+            const b = rnd(2, 6);
+            return { a: b * rnd(3, 9), b, c: rnd(1, 8) };
+          },
+          ex: v => [v.a, '÷', v.b, '+', v.c],
+          tx: v => `${v.a} kelereng dibagi sama banyak kepada ${v.b} anak. Kemudian tiap anak diberi tambahan ${v.c} kelereng. Berapa kelereng yang dimiliki tiap anak sekarang?` },
+        { em: '🍰', u: 'kue',
+          gen: () => {
+            const c = rnd(2, 6);
+            return { a: rnd(2, 9), b: c * rnd(1, 3), c };
+          },
+          ex: v => [v.a, '×', v.b, '÷', v.c],
+          tx: v => `${v.n} membuat ${v.a} kotak kue, tiap kotak berisi ${v.b} kue. Semua kue dibagi rata ke ${v.c} panti asuhan. Berapa kue yang diterima tiap panti?` },
+        { em: '📒', u: 'buku tulis',
+          gen: () => ({ a: rnd(8, 20), b: rnd(8, 20), c: rnd(2, 5) }),
+          ex: v => ['(', v.a, '+', v.b, ')', '×', v.c],
+          tx: v => `Di kelas ${v.n} ada ${v.a} siswa putra dan ${v.b} siswa putri. Tiap siswa mendapat ${v.c} buku tulis. Berapa buku tulis yang dibagikan?` },
+        { em: '🍎', u: 'apel',
+          gen: () => ({ a: rnd(4, 8), b: rnd(10, 20), c: rnd(3, 8), d: rnd(3, 6) }),
+          ex: v => [v.a, '×', v.b, '−', v.c, '×', v.d],
+          tx: v => `Toko buah menerima ${v.a} peti apel, tiap peti berisi ${v.b} apel. Hari ini terjual ${v.c} kantong, tiap kantong berisi ${v.d} apel. Berapa apel yang masih tersisa?` },
+        { em: '🎀', u: 'meter',
+          gen: () => {
+            const c = rnd(2, 6);
+            const b = rnd(5, 20);
+            return { a: b + c * rnd(2, 9), b, c, d: rnd(1, 9) };
+          },
+          ex: v => ['(', v.a, '−', v.b, ')', '÷', v.c, '+', v.d],
+          tx: v => `${v.n} punya pita ${v.a} meter. Sebanyak ${v.b} meter dipakai untuk hiasan, sisanya dipotong menjadi ${v.c} bagian sama panjang. Satu potongan lalu disambung dengan ${v.d} meter pita lain. Berapa meter panjang pita sambungan itu?` },
+        { em: '🥕', u: 'kg',
+          gen: () => ({ a: rnd(2, 5), b: rnd(5, 10), c: rnd(2, 5), d: rnd(5, 10), e: rnd(5, 30) }),
+          ex: v => [v.a, '×', v.b, '+', v.c, '×', v.d, '−', v.e],
+          tx: v => `Petani memanen ${v.a} karung wortel, tiap karung ${v.b} kg, dan ${v.c} karung kentang, tiap karung ${v.d} kg. Sebanyak ${v.e} kg dibawa pulang. Berapa kg hasil panen yang dijual?` },
+        { em: '🧃', u: 'kardus',
+          gen: () => {
+            const c = rnd(2, 6);
+            const total = c * rnd(4, 10);
+            const a = rnd(3, total - 3);
+            return { a, b: total - a, c };
+          },
+          ex: v => ['(', v.a, '+', v.b, ')', '÷', v.c],
+          tx: v => `Ada ${v.a} botol jus jeruk dan ${v.b} botol jus apel. Semua botol dimasukkan ke dalam kardus, tiap kardus memuat ${v.c} botol. Berapa kardus yang diperlukan?` }
+      ],
+
+      4: [
+        { em: '🚌', u: 'siswa',
+          gen: () => ({ a: rnd(2, 5), b: rnd(2, 5), c: rnd(20, 40), d: rnd(3, 15) }),
+          ex: v => ['(', v.a, '+', v.b, ')', '×', v.c, '−', v.d],
+          tx: v => `Sekolah menyewa ${v.a} bus untuk kelas 4 dan ${v.b} bus untuk kelas 5. Setiap bus terisi penuh ${v.c} siswa, tetapi ${v.d} siswa berhalangan hadir. Berapa siswa yang ikut karyawisata?` },
+        { em: '📦', u: 'buku',
+          gen: () => ({ a: rnd(8, 20), b: rnd(2, 7), c: rnd(10, 25), d: rnd(5, 40) }),
+          ex: v => ['(', v.a, '−', v.b, ')', '×', v.c, '+', v.d],
+          tx: v => `Gudang menyimpan ${v.a} dus buku, tiap dus berisi ${v.c} buku. Sebanyak ${v.b} dus dikirim ke sekolah. Di atas meja masih ada ${v.d} buku lepas. Berapa seluruh buku yang masih ada di gudang?` },
+        { em: '🥭', u: 'mangga',
+          gen: () => {
+            const b = rnd(2, 6);
+            const k = rnd(5, 12);
+            return { a: b * k, b, c: rnd(2, 6), d: rnd(2, 20) };
+          },
+          ex: v => [v.a, '÷', v.b, '×', v.c, '−', v.d],
+          tx: v => `${v.a} mangga dibagi rata ke ${v.b} keranjang. ${v.n} membeli ${v.c} keranjang, lalu memberikan ${v.d} mangga kepada tetangga. Berapa mangga yang tersisa pada ${v.n}?` },
+        { em: '🏊', u: 'ribu rupiah',
+          gen: () => {
+            const d = rnd(2, 4);
+            return { a: rnd(8, 20), b: rnd(8, 20), c: d * rnd(1, 3), d };
+          },
+          ex: v => ['(', v.a, '+', v.b, ')', '×', v.c, '÷', v.d],
+          tx: v => `Kolam renang dikunjungi ${v.a} anak pagi hari dan ${v.b} anak sore hari. Tiap anak membayar tiket ${v.c} ribu rupiah. Seluruh uang tiket dibagi rata kepada ${v.d} petugas. Berapa ribu rupiah yang diterima tiap petugas?` },
+        { em: '📓', u: 'buku',
+          gen: () => ({ a: rnd(3, 8), b: rnd(3, 8), c: rnd(10, 24), d: rnd(5, 15), e: rnd(2, 6) }),
+          ex: v => ['(', v.a, '+', v.b, ')', '×', v.c, '−', v.d, '×', v.e],
+          tx: v => `Koperasi sekolah menerima ${v.a} pak buku tulis dari toko Maju dan ${v.b} pak dari toko Jaya. Tiap pak berisi ${v.c} buku. Sebanyak ${v.d} siswa masing-masing membeli ${v.e} buku. Berapa buku yang masih tersisa?` },
+        { em: '🍘', u: 'biskuit',
+          gen: () => {
+            const c = rnd(2, 6);
+            return { a: rnd(5, 12), b: c * rnd(1, 4), c, d: rnd(2, 15), e: rnd(2, 15) };
+          },
+          ex: v => [v.a, '×', v.b, '÷', v.c, '−', v.d, '+', v.e],
+          tx: v => `Ada ${v.a} kotak biskuit, tiap kotak berisi ${v.b} biskuit. Semua biskuit dibagi rata ke ${v.c} kelas. Kelas 5A menyumbang ${v.d} biskuit untuk bazar, lalu menerima ${v.e} biskuit dari wali murid. Berapa biskuit yang kini dimiliki kelas 5A?` }
+      ],
+
+      5: [
+        { em: '🚛', u: 'karung',
+          gen: () => ({ a: rnd(5, 12), b: rnd(5, 12), c: rnd(20, 50), d: rnd(5, 15), e: rnd(10, 40) }),
+          ex: v => ['(', v.a, '+', v.b, ')', '×', v.c, '−', v.d, '×', v.e],
+          tx: v => `Gudang beras menerima ${v.a} truk di pagi hari dan ${v.b} truk di sore hari. Tiap truk membawa ${v.c} karung beras. Sebanyak ${v.d} toko masing-masing mengambil ${v.e} karung. Berapa karung beras yang masih di gudang?` },
+        { em: '🎟️', u: 'ribu rupiah',
+          gen: () => ({ a: rnd(40, 120), b: rnd(5, 10), c: rnd(20, 50), d: rnd(10, 15) }),
+          ex: v => [v.a, '×', v.b, '+', v.c, '×', v.d],
+          tx: v => `Festival sekolah menjual ${v.a} tiket anak seharga ${v.b} ribu rupiah dan ${v.c} tiket dewasa seharga ${v.d} ribu rupiah. Berapa ribu rupiah seluruh pemasukan tiket?` },
+        { em: '🌾', u: 'kg',
+          gen: () => {
+            const d = rnd(3, 8);
+            const b = rnd(5, 30);
+            return { a: b + d * rnd(3, 6), b, c: rnd(10, 25), d };
+          },
+          ex: v => ['(', v.a, '−', v.b, ')', '×', v.c, '÷', v.d],
+          tx: v => `Lumbung berisi ${v.a} karung padi, tiap karung ${v.c} kg. Sebanyak ${v.b} karung dijual dan sisanya dibagi rata kepada ${v.d} petani. Berapa kg padi yang diterima tiap petani?` },
+        { em: '🧵', u: 'cm',
+          gen: () => {
+            const b = rnd(2, 8);
+            return { a: b * rnd(10, 30), b, c: rnd(2, b), d: rnd(5, 40), e: rnd(5, 20) };
+          },
+          ex: v => [v.a, '÷', v.b, '×', v.c, '+', v.d, '−', v.e],
+          tx: v => `Seutas tali ${v.a} cm dipotong menjadi ${v.b} bagian sama panjang. ${v.n} mengambil ${v.c} bagian, lalu menyambungnya dengan tali ${v.d} cm dan memotong ${v.e} cm. Berapa cm panjang tali di tangan ${v.n}?` },
+        { em: '📕', u: 'ribu rupiah',
+          gen: () => {
+            const d = rnd(2, 6);
+            return { a: rnd(10, 40), b: rnd(10, 40), c: d * rnd(1, 3), d, e: rnd(2, 15) };
+          },
+          ex: v => ['(', v.a, '+', v.b, ')', '×', v.c, '÷', v.d, '+', v.e],
+          tx: v => `Dua kelas mengumpulkan ${v.a} dan ${v.b} buku bekas. Tiap buku dijual ${v.c} ribu rupiah, lalu hasilnya dibagi rata untuk ${v.d} panti asuhan. Setiap panti juga mendapat tambahan ${v.e} ribu rupiah dari donatur. Berapa ribu rupiah yang diterima tiap panti?` },
+        { em: '🏟️', u: 'kursi',
+          gen: () => ({ a: rnd(4, 10), b: rnd(4, 10), c: rnd(30, 60), d: rnd(3, 15) }),
+          ex: v => ['(', v.a, '+', v.b, ')', '×', '(', v.c, '−', v.d, ')'],
+          tx: v => `Stadion punya ${v.a} blok kursi di tribun utara dan ${v.b} blok di tribun selatan. Tiap blok memuat ${v.c} kursi, tetapi ${v.d} kursi di setiap blok sedang rusak. Berapa kursi yang masih bisa dipakai?` }
+      ],
+
+      6: [
+        { em: '🏔️', u: '°C',
+          gen: () => ({ a: rnd(5, 15), b: rnd(2, 5), c: rnd(2, 6), d: rnd(3, 12) }),
+          ex: v => [-v.a, '+', v.b, '×', v.c, '−', v.d],
+          tx: v => `Pagi hari suhu di puncak gunung ${v.a}°C di bawah nol. Tiap jam suhu naik ${v.b}°C selama ${v.c} jam, lalu turun ${v.d}°C karena kabut tebal. Berapa °C suhu sekarang?` },
+        { em: '🤿', u: 'm',
+          gen: () => ({ a: rnd(10, 30), b: rnd(2, 6), c: rnd(2, 6), d: rnd(2, 6), e: rnd(2, 6) }),
+          ex: v => [-v.a, '+', v.b, '×', v.c, '−', v.d, '×', v.e],
+          tx: v => `Seorang penyelam berada ${v.a} m di bawah permukaan laut. Ia naik ${v.b} m tiap menit selama ${v.c} menit, lalu turun ${v.d} m tiap menit selama ${v.e} menit. Berapa meter posisinya sekarang? (tanda minus berarti di bawah permukaan)` },
+        { em: '💰', u: 'ribu rupiah',
+          gen: () => ({ a: rnd(20, 80), b: rnd(5, 15), c: rnd(2, 6), d: rnd(10, 40), e: rnd(5, 30) }),
+          ex: v => [-v.a, '+', v.b, '×', v.c, '−', v.d, '−', v.e],
+          tx: v => `${v.n} punya utang ${v.a} ribu rupiah. Selama ${v.c} minggu ia mendapat uang saku ${v.b} ribu rupiah per minggu. Lalu ia membeli buku seharga ${v.d} ribu dan topi seharga ${v.e} ribu. Berapa ribu rupiah saldonya sekarang? (negatif berarti masih berutang)` },
+        { em: '🎯', u: 'poin',
+          gen: () => ({ p: rnd(3, 6), q: rnd(2, 5), a: rnd(3, 12), b: rnd(2, 10) }),
+          ex: v => [v.a, '×', v.p, '−', v.b, '×', v.q],
+          tx: v => `Dalam kuis, tiap jawaban benar bernilai +${v.p} poin dan tiap jawaban salah bernilai −${v.q} poin. ${v.n} menjawab ${v.a} soal dengan benar dan ${v.b} soal dengan salah. Berapa skor akhirnya?` },
+        { em: '🎮', u: 'poin',
+          gen: () => ({ p: rnd(3, 8), q: rnd(5, 12), a: rnd(3, 12), b: rnd(2, 10), c: rnd(5, 20) }),
+          ex: v => [v.a, '×', v.p, '−', v.b, '×', v.q, '+', v.c],
+          tx: v => `Di game petualangan, ${v.n} mengumpulkan ${v.a} koin emas bernilai +${v.p} poin dan menabrak ${v.b} jebakan yang masing-masing mengurangi ${v.q} poin. Di akhir level ia mendapat bonus ${v.c} poin. Berapa total poinnya?` },
+        { em: '🛗', u: 'lantai',
+          gen: () => ({ a: rnd(2, 5), b: rnd(3, 12), c: rnd(2, 10), d: rnd(2, 10) }),
+          ex: v => [-v.a, '+', v.b, '−', v.c, '+', v.d],
+          tx: v => `Sebuah lift berhenti di basement ${v.a} (lantai −${v.a}). Lift naik ${v.b} lantai, turun ${v.c} lantai, lalu naik lagi ${v.d} lantai. Di lantai berapa lift sekarang? (lantai minus berarti basement)` }
+      ]
+    };
+
+    function makeExprQ(n, cfg, seen) {
+      for (let t = 0; t < 30; t++) {
+        const e = makeExpr(n, cfg);
+        if (!e) continue;
+        const text = fmtTokens(e.tokens) + ' = …';
+        if (seen.has(text)) continue;
+        seen.add(text);
+        const v = e.res.value;
+        return mk(
+          text,
+          fmtNum(v),
+          makeDistractors(e.tokens, v, cfg).map(fmtNum),
+          explainExpr(e.tokens, e.res, e.hasParen)
+        );
+      }
+      return null;
+    }
+
+    function makeStoryQ(t, cfg, seen) {
+      for (let tries = 0; tries < 120; tries++) {
+        const v = t.gen();
+        v.n = pick(NAMES);
+        const tokens = t.ex(v);
+        let res;
+        try {
+          res = evalSteps(tokens, cfg);
+        } catch (e) {
+          continue;
+        }
+        const text = t.tx(v);
+        if (seen.has(text)) continue;
+        seen.add(text);
+        const val = res.value;
+        const q = mk(
+          text,
+          fmtNum(val),
+          makeDistractors(tokens, val, cfg).map(fmtNum),
+          'Ubah ceritanya menjadi bentuk hitung:<br>' +
+            explainExpr(tokens, res, tokens.includes('(')) +
+            `<br>✅ Jawabannya <b>${fmtNum(val)}</b> ${t.u}.`,
+          `${t.em} ${t.em} ${t.em}`
+        );
+        q.story = true;
+        q.expr = fmtTokens(tokens);
+        return q;
+      }
+      return null;
+    }
+
+    function makeQuestions(l) {
+      const cfg = LEVEL_CFG[l] || LEVEL_CFG[6];
+      const sorted = cfg.counts.slice().sort((a, b) => a - b);
+      const counts = [0, 2, 4, 6, 8].map(i => sorted[i]);
+      const seen = new Set();
+      const out = [];
+
+      // 5 soal ekspresi (2–5 operand)
+      for (const n of counts) {
+        let q = makeExprQ(n, cfg, seen);
+        if (!q) {
+          const a = rnd(2, 9);
+          const b = rnd(2, 9);
+          q = mk(`${a} + ${b} = …`, a + b, [a + b + 1, a + b - 1, a + b + 2],
+            `${a} + ${b} = ${a + b}`);
+        }
+        out.push(q);
+      }
+
+      // 5 soal cerita yang berbeda-beda
+      let made = 0;
+      for (const t of shuffle((STORY[l] || STORY[6]).slice())) {
+        if (made >= 5) break;
+        const q = makeStoryQ(t, cfg, seen);
+        if (q) {
+          out.push(q);
+          made++;
+        }
+      }
+      // cadangan bila ada cerita yang gagal dibuat
+      while (made < 5) {
+        const q = makeExprQ(counts[2], cfg, seen);
+        if (!q) break;
+        out.push(q);
+        made++;
+      }
+      return shuffle(out);
+    }
+
+    /* ====== Efek hadiah: sapaan nama, konfeti menumpuk, burung terbang ====== */
+    const FX = { raf: 0, last: 0, running: false, conf: null, bird: null };
+    const CONF_COLORS = [
+      '#ff786c', '#ffc847', '#4766d8', '#34c890',
+      '#a78bfa', '#ff8bd0', '#4cc9f0', '#ff9f43'
+    ];
+    const CONF_SHAPES = ['rect', 'square', 'circle', 'tri'];
+    const COL_W = 4;
+
+    function esc(s) {
+      return String(s).replace(/[&<>"']/g, ch => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+      }[ch]));
+    }
+
+    function prefersReducedMotion() {
+      return !!(window.matchMedia &&
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    }
+
+    function praiseFor(score, name) {
+      const n = `<span class="pname">${esc(name)}</span>`;
+      const high = [
+        `${n} hebat sekali! Otakmu secepat kilat ⚡`,
+        `Bravo, ${n}! Kamu jagoan hitung sejati 🌟`,
+        `Masya Allah, ${n}! Ketelitianmu keren banget ✨`,
+        `Luar biasa, ${n}! Kamu pantas jadi juara 🏆`
+      ];
+      const mid = [
+        `Bagus, ${n}! Sedikit lagi kamu jadi jagoan 💪`,
+        `Kerja bagus, ${n}! Kamu makin pintar setiap hari 🌈`,
+        `Mantap, ${n}! Terus berlatih ya, kamu pasti bisa 🚀`
+      ];
+      const low = [
+        `Kamu sudah berani mencoba, ${n}, itu hebat! 🌱`,
+        `Tidak apa-apa, ${n}. Yuk coba lagi, kamu pasti bisa! 💛`,
+        `Semangat, ${n}! Setiap latihan membuatmu lebih pintar 🌟`
+      ];
+      return pick(score >= 85 ? high : score >= 55 ? mid : low);
+    }
+
+    function sizeConfetti() {
+      const c = FX.conf;
+      const card = document.querySelector('#result .card');
+      c.W = card.clientWidth;
+      c.H = card.clientHeight;
+      c.dpr = Math.min(window.devicePixelRatio || 1, 2);
+      [c.pileCv, c.fallCv].forEach(cv => {
+        cv.width = Math.round(c.W * c.dpr);
+        cv.height = Math.round(c.H * c.dpr);
+      });
+      c.pile.setTransform(c.dpr, 0, 0, c.dpr, 0, 0);
+      c.fall.setTransform(c.dpr, 0, 0, c.dpr, 0, 0);
+      c.heights = new Float32Array(Math.ceil(c.W / COL_W) + 1);
+      c.cap = Math.min(90, c.H * 0.16);
+    }
+
+    function drawPiece(ctx, p, x, y, rot, sy) {
+      const s = p.size;
+      ctx.save();
+      ctx.translate(x, y);
+      ctx.rotate(rot);
+      ctx.scale(1, sy);
+      ctx.fillStyle = p.color;
+      ctx.beginPath();
+      if (p.shape === 'rect') {
+        ctx.rect(-s * 0.75, -s * 0.32, s * 1.5, s * 0.64);
+      } else if (p.shape === 'square') {
+        ctx.rect(-s / 2, -s / 2, s, s);
+      } else if (p.shape === 'circle') {
+        ctx.arc(0, 0, s / 2, 0, Math.PI * 2);
+      } else {
+        ctx.moveTo(0, -s * 0.6);
+        ctx.lineTo(s * 0.6, s * 0.5);
+        ctx.lineTo(-s * 0.6, s * 0.5);
+        ctx.closePath();
+      }
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function spawnPiece(c) {
+      const s = 8 + Math.random() * 7;
+      c.ps.push({
+        shape: pick(CONF_SHAPES),
+        color: pick(CONF_COLORS),
+        size: s,
+        x: Math.random() * c.W,
+        y: -s - Math.random() * 30,
+        vy: 90 + Math.random() * 100,
+        sway: 18 + Math.random() * 40,
+        swayF: 1.5 + Math.random() * 2.5,
+        ph: Math.random() * 6.28,
+        rot: Math.random() * 6.28,
+        vr: (Math.random() - 0.5) * 8,
+        flip: Math.random() * 6.28,
+        vf: 3 + Math.random() * 5
+      });
+    }
+
+    function stepConfetti(dt) {
+      const c = FX.conf;
+      if (!c) return;
+      if (c.left > 0) {
+        c.acc += c.rate * dt;
+        while (c.acc >= 1 && c.left > 0) {
+          spawnPiece(c);
+          c.acc -= 1;
+          c.left--;
+        }
+      }
+      c.fall.clearRect(0, 0, c.W, c.H);
+      for (let i = c.ps.length - 1; i >= 0; i--) {
+        const p = c.ps[i];
+        p.ph += p.swayF * dt;
+        p.x = Math.max(0, Math.min(c.W, p.x + Math.cos(p.ph) * p.sway * dt));
+        p.y += p.vy * dt;
+        p.rot += p.vr * dt;
+        p.flip += p.vf * dt;
+
+        const half = p.size * 0.6;
+        const c0 = Math.max(0, Math.floor((p.x - half) / COL_W));
+        const c1 = Math.min(c.heights.length - 1, Math.floor((p.x + half) / COL_W));
+        let sum = 0;
+        for (let k = c0; k <= c1; k++) sum += c.heights[k];
+        const avg = sum / (c1 - c0 + 1);
+        const floor = c.H - avg;
+
+        if (p.y + p.size * 0.3 >= floor) {
+          drawPiece(c.pile, p, p.x, floor - p.size * 0.18, p.rot,
+            0.35 + Math.random() * 0.45);
+          const nh = Math.min(c.cap, avg + p.size * 0.3);
+          for (let k = c0; k <= c1; k++) {
+            if (c.heights[k] < nh) c.heights[k] = nh;
+          }
+          c.ps.splice(i, 1);
+          continue;
+        }
+        drawPiece(c.fall, p, p.x, p.y, p.rot, Math.cos(p.flip));
+      }
+    }
+
+    function resetBird(b, first) {
+      const W = window.innerWidth;
+      const H = window.innerHeight;
+      b.x = -80;
+      b.base = H * (0.18 + Math.random() * 0.4);
+      b.amp = 24 + Math.random() * 40;
+      b.y = b.base;
+      b.vy = 0;
+      b.t = 0;
+      b.speed = Math.max(110, W / (5.5 + Math.random() * 2.5));
+      b.wait = first ? 0.8 : 1 + Math.random() * 2;
+    }
+
+    function stepBird(dt) {
+      const b = FX.bird;
+      if (!b) return;
+      if (b.wait > 0) {
+        b.wait -= dt;
+        b.el.style.display = 'none';
+        return;
+      }
+      b.el.style.display = 'block';
+      b.t += dt;
+      b.x += b.speed * dt;
+
+      // Seperti Flappy Bird: kepak sayap memberi lonjakan, gravitasi menarik turun
+      const target = b.base + Math.sin(b.t * 1.6) * b.amp;
+      if (b.y > target + 12 && b.vy > -80) {
+        b.vy = -340;
+        b.flap = 0.28;
+      }
+      b.vy += 1150 * dt;
+      b.y += b.vy * dt;
+      const maxY = window.innerHeight - 70;
+      if (b.y > maxY) {
+        b.y = maxY;
+        b.vy = -340;
+        b.flap = 0.28;
+      }
+      if (b.y < 10) {
+        b.y = 10;
+        b.vy = 0;
+      }
+      b.flap = Math.max(0, b.flap - dt);
+      b.wing += dt * (b.flap > 0 ? 36 : 13);
+      b.wingEl.style.transform = `rotate(${Math.sin(b.wing) * 30}deg)`;
+      const tilt = Math.max(-28, Math.min(55, b.vy * 0.09));
+      b.el.style.transform =
+        `translate(${b.x.toFixed(1)}px, ${b.y.toFixed(1)}px) rotate(${tilt.toFixed(1)}deg)`;
+
+      if (b.x > window.innerWidth + 80) resetBird(b, false);
+    }
+
+    function fxLoop(now) {
+      if (!FX.running) return;
+      const dt = Math.min(0.05, (now - FX.last) / 1000);
+      FX.last = now;
+      stepConfetti(dt);
+      stepBird(dt);
+      FX.raf = requestAnimationFrame(fxLoop);
+    }
+
+    function stopFx() {
+      FX.running = false;
+      cancelAnimationFrame(FX.raf);
+      const c = FX.conf;
+      if (c) {
+        c.pile.clearRect(0, 0, c.W, c.H);
+        c.fall.clearRect(0, 0, c.W, c.H);
+      }
+      if (FX.bird) FX.bird.el.style.display = 'none';
+      FX.conf = null;
+      FX.bird = null;
+    }
+
+    function startFx(score) {
+      stopFx();
+      if (prefersReducedMotion()) return;
+      const pileCv = document.querySelector('#pileCv');
+      const fallCv = document.querySelector('#fallCv');
+      FX.conf = {
+        pileCv,
+        fallCv,
+        pile: pileCv.getContext('2d'),
+        fall: fallCv.getContext('2d'),
+        ps: [],
+        acc: 0
+      };
+      sizeConfetti();
+      const base = score >= 85 ? 420 : score >= 55 ? 320 : 240;
+      const scale = Math.max(0.5, Math.min(1.2, FX.conf.W / 700));
+      FX.conf.left = Math.round(base * scale);
+      FX.conf.rate = FX.conf.left / 7;
+
+      FX.bird = {
+        el: document.querySelector('#bird'),
+        wingEl: document.querySelector('#birdWing'),
+        wing: 0,
+        flap: 0
+      };
+      resetBird(FX.bird, true);
+
+      FX.last = performance.now();
+      FX.running = true;
+      FX.raf = requestAnimationFrame(fxLoop);
+    }
+
+    window.addEventListener('resize', () => {
+      if (FX.conf) sizeConfetti();
+    });
+
+    function toast(t) {
+      let x = document.querySelector('#toast');
+      x.textContent = t;
+      x.classList.add('show');
+      setTimeout(() => x.classList.remove('show'), 2300);
+    }
+
+    render();
+    if (!profile) setTimeout(openLogin, 400);
+  </script>
+</body>
+</html>
