@@ -725,6 +725,234 @@
       object-position: center 47%;
     }
 
+    .tertiary {
+      background: #dff6e8;
+      color: #1f6b45;
+      box-shadow: 0 4px 0 #b6e2c8;
+      padding: 14px 20px;
+      border-radius: 14px;
+      font-weight: 900;
+    }
+
+    .rv-title {
+      font-size: clamp(24px, 3.4vw, 32px);
+      margin: 8px 0 6px;
+      letter-spacing: -0.8px;
+    }
+
+    .rv-summary {
+      color: var(--muted);
+      margin: 0 0 16px;
+      line-height: 1.5;
+    }
+
+    .rv-filter {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 0 0 18px;
+    }
+
+    .rv-filter button {
+      background: #f1f3fb;
+      color: var(--ink);
+      padding: 9px 14px;
+      border-radius: 99px;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .rv-filter button.on {
+      background: #5472e9;
+      color: #fff;
+    }
+
+    .rv {
+      border: 2px solid var(--line);
+      border-radius: 18px;
+      padding: 16px 18px;
+      margin: 0 0 14px;
+      background: #fff;
+    }
+
+    .rv.ok {
+      border-color: #bfe6cf;
+      background: linear-gradient(#fff, #f5fcf8);
+    }
+
+    .rv.no {
+      border-color: #f7cbbd;
+      background: linear-gradient(#fff, #fff8f4);
+    }
+
+    .rv-head {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .rv-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--green);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      font-size: 13px;
+    }
+
+    .rv-tag {
+      background: #fff2c9;
+      color: #72531a;
+      padding: 4px 10px;
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .rv-tag.alt {
+      background: #e7efff;
+      color: #2f46a8;
+    }
+
+    .rv-status {
+      margin-left: auto;
+      font-weight: 900;
+      font-size: 13px;
+    }
+
+    .rv.ok .rv-status {
+      color: #1f7a4d;
+    }
+
+    .rv.no .rv-status {
+      color: #c2512f;
+    }
+
+    .rv-q {
+      margin: 0 0 10px;
+      font-weight: 800;
+      font-size: 17px;
+      line-height: 1.55;
+    }
+
+    .rv-ans {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .chip {
+      padding: 6px 12px;
+      border-radius: 99px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .chip.good {
+      background: #e5f8ec;
+      color: #1f6b45;
+    }
+
+    .chip.bad {
+      background: #ffe8e0;
+      color: #a8452a;
+    }
+
+    .rv-steps {
+      background: #f7f8fe;
+      border-radius: 14px;
+      padding: 12px 14px;
+      line-height: 1.5;
+    }
+
+    .rv-stitle {
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--green);
+      margin: 2px 0 6px;
+    }
+
+    .rv-expr {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: -0.3px;
+      margin-bottom: 6px;
+      word-break: break-word;
+    }
+
+    .rv-hint {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .rv-list {
+      list-style: none;
+      counter-reset: s;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 9px;
+    }
+
+    .rv-list li {
+      counter-increment: s;
+      display: grid;
+      grid-template-columns: 26px 1fr;
+      column-gap: 10px;
+      row-gap: 1px;
+    }
+
+    .rv-list li:before {
+      content: counter(s);
+      grid-row: 1 / span 2;
+      width: 24px;
+      height: 24px;
+      border-radius: 8px;
+      background: #e7efff;
+      color: #2f46a8;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      font-size: 12px;
+    }
+
+    .rv-do {
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .rv-arrow {
+      color: var(--muted);
+      font-size: 14px;
+      word-break: break-word;
+    }
+
+    .rv-final {
+      margin-top: 12px;
+      font-weight: 900;
+      color: #1f6b45;
+    }
+
+    .rv-empty {
+      text-align: center;
+      color: var(--muted);
+      padding: 30px 10px;
+      font-weight: 800;
+    }
+
+    #review .result-actions {
+      margin-top: 8px;
+    }
+
     .question.story {
       font-size: clamp(18px, 2.7vw, 24px);
       line-height: 1.6;
@@ -986,6 +1214,35 @@
           <div id="praise" class="praise"></div>
           <p id="resultDesc"></p>
           <div class="result-actions">
+            <button class="tertiary" onclick="openReview()">
+              📖 Lihat pembahasan
+            </button>
+            <button class="primary" onclick="startLevel(currentLevel)">
+              Main lagi ↻
+            </button>
+            <button class="secondary" onclick="goHome()">
+              Pilih pulau lain
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="review" class="screen">
+        <button class="back" onclick="backToResult()">← Kembali ke hasil</button>
+        <div class="card">
+          <div class="eyebrow" id="rvLevel">PULAU 1</div>
+          <h1 class="rv-title">📖 Pembahasan Soal</h1>
+          <p class="rv-summary" id="rvSummary"></p>
+          <div class="rv-filter">
+            <button id="rvFilterAll" data-f="all" class="on"
+              onclick="setRvFilter('all')">Semua soal</button>
+            <button id="rvFilterWrong" data-f="wrong"
+              onclick="setRvFilter('wrong')">Yang belum tepat</button>
+          </div>
+          <div id="rvList"></div>
+          <div class="result-actions">
+            <button class="secondary" onclick="backToResult()">
+              ← Kembali ke hasil
+            </button>
             <button class="primary" onclick="startLevel(currentLevel)">
               Main lagi ↻
             </button>
@@ -1190,6 +1447,7 @@
       );
       qi = 0;
       correct = 0;
+      playLog = [];
       show('game');
       document.querySelector('#gameLevel').textContent =
         `PULAU ${n} · ${levels[n - 1].name.toUpperCase()}`;
@@ -1246,6 +1504,7 @@
       if (locked) return;
       locked = true;
       let q = questions[qi];
+      playLog.push({ q, picked: i });
       let buttons = [...document.querySelectorAll('.answer')];
       buttons[q.correct].classList.add('correct');
 
@@ -1280,6 +1539,7 @@
 
     function finish() {
       let score = correct * 10;
+      lastScore = score;
       let old = store[currentLevel] || { best: 0, stars: 0 };
       let stars = score >= 85 ? 3 : score >= 70 ? 2 : score >= 55 ? 1 : 0;
       store[currentLevel] = {
@@ -1454,21 +1714,26 @@
       }
       if (idx < 0) return null;
       const v = applyOp(tokens[idx - 1], tokens[idx], tokens[idx + 1], cfg);
+      reduceOnce.last = {
+        l: tokens[idx - 1], op: tokens[idx], r: tokens[idx + 1], v, paren: open >= 0
+      };
       return tokens.slice(0, idx - 1).concat([v], tokens.slice(idx + 2));
     }
 
     function evalSteps(tokens, cfg) {
       const steps = [];
+      const notes = [];
       let cur = tokens;
       for (;;) {
         let nxt = reduceOnce(cur, cfg);
         if (!nxt) break;
         nxt = stripSingles(nxt);
         steps.push(nxt);
+        notes.push(reduceOnce.last);
         cur = nxt;
       }
       if (cur.length !== 1) throw new Error('tidak selesai');
-      return { value: cur[0], steps };
+      return { value: cur[0], steps, notes };
     }
 
     /* Nilai jika kurung diabaikan (kesalahan umum siswa) */
@@ -1587,6 +1852,35 @@
       }
       for (let k = 1; out.length < 3; k++) add(value + 20 + k);
       return out.slice(0, 3);
+    }
+
+    function fmtNote(n) {
+      const f = x => (x < 0 ? '(' + fmtNum(x) + ')' : String(x));
+      const label = n.paren
+        ? 'Dalam kurung'
+        : n.op === '×' || n.op === '÷'
+        ? 'Kali/bagi dulu'
+        : 'Tambah/kurang';
+      return `${label}: ${f(n.l)} ${n.op} ${f(n.r)} = ${fmtNum(n.v)}`;
+    }
+
+    function reviewData(tokens, res, hasParen, unit) {
+      const hasMD = tokens.includes('×') || tokens.includes('÷');
+      const hasAS = tokens.includes('+') || tokens.includes('−');
+      return {
+        expr: fmtTokens(tokens),
+        hint: hasParen
+          ? 'Kerjakan dulu yang di dalam kurung, lalu × dan ÷, terakhir + dan −.'
+          : hasMD && hasAS
+          ? 'Kerjakan × dan ÷ lebih dulu, baru + dan − dari kiri ke kanan.'
+          : 'Kerjakan dari kiri ke kanan.',
+        steps: res.steps.map((st, i) => ({
+          desc: fmtNote(res.notes[i]),
+          expr: fmtTokens(st)
+        })),
+        answer: fmtNum(res.value),
+        unit: unit || ''
+      };
     }
 
     function explainExpr(tokens, res, hasParen) {
@@ -1788,8 +2082,8 @@
           tx: v => `Lumbung berisi ${v.a} karung padi, tiap karung ${v.c} kg. Sebanyak ${v.b} karung dijual dan sisanya dibagi rata kepada ${v.d} petani. Berapa kg padi yang diterima tiap petani?` },
         { em: '🧵', u: 'cm',
           gen: () => {
-            const b = rnd(2, 8);
-            return { a: b * rnd(10, 30), b, c: rnd(2, b), d: rnd(5, 40), e: rnd(5, 20) };
+            const b = rnd(3, 8);
+            return { a: b * rnd(10, 30), b, c: rnd(2, b - 1), d: rnd(5, 40), e: rnd(5, 20) };
           },
           ex: v => [v.a, '÷', v.b, '×', v.c, '+', v.d, '−', v.e],
           tx: v => `Seutas tali ${v.a} cm dipotong menjadi ${v.b} bagian sama panjang. ${v.n} mengambil ${v.c} bagian, lalu menyambungnya dengan tali ${v.d} cm dan memotong ${v.e} cm. Berapa cm panjang tali di tangan ${v.n}?` },
@@ -1842,12 +2136,14 @@
         if (seen.has(text)) continue;
         seen.add(text);
         const v = e.res.value;
-        return mk(
+        const q = mk(
           text,
           fmtNum(v),
           makeDistractors(e.tokens, v, cfg).map(fmtNum),
           explainExpr(e.tokens, e.res, e.hasParen)
         );
+        q.review = reviewData(e.tokens, e.res, e.hasParen, '');
+        return q;
       }
       return null;
     }
@@ -1878,6 +2174,7 @@
         );
         q.story = true;
         q.expr = fmtTokens(tokens);
+        q.review = reviewData(tokens, res, tokens.includes('('), t.u);
         return q;
       }
       return null;
@@ -2174,6 +2471,101 @@
     window.addEventListener('resize', () => {
       if (FX.conf) sizeConfetti();
     });
+
+    /* ====== Pembahasan: langkah penyelesaian tiap soal ====== */
+    let playLog = [];
+    let lastScore = 0;
+    let rvFilter = 'all';
+
+    function letter(i) {
+      return String.fromCharCode(65 + i);
+    }
+
+    function stepsHtml(q) {
+      const r = q.review;
+      if (!r) return `<div class="rv-steps">${q.explain}</div>`;
+      const steps = r.steps
+        .map(
+          s =>
+            `<li><span class="rv-do">${esc(s.desc)}</span>` +
+            `<span class="rv-arrow">→ ${esc(s.expr)}</span></li>`
+        )
+        .join('');
+      return `
+        <div class="rv-steps">
+          <div class="rv-stitle">${q.story ? 'Ubah cerita jadi bentuk hitung' : 'Bentuk hitung'}</div>
+          <div class="rv-expr">${esc(r.expr)}</div>
+          <div class="rv-hint">💡 ${esc(r.hint)}</div>
+          <div class="rv-stitle">Langkah penyelesaian</div>
+          <ol class="rv-list">${steps}</ol>
+          <div class="rv-final">✅ Jawaban: ${esc(r.answer)} ${esc(r.unit)}</div>
+        </div>`;
+    }
+
+    function rvItem(h, idx) {
+      const q = h.q;
+      const ok = h.picked === q.correct;
+      return `
+        <article class="rv ${ok ? 'ok' : 'no'}">
+          <div class="rv-head">
+            <span class="rv-num">${idx + 1}</span>
+            <span class="rv-tag ${q.story ? '' : 'alt'}">
+              ${q.story ? '📖 Soal cerita' : '🔢 Hitungan'}
+            </span>
+            <span class="rv-status">${ok ? '✓ Benar' : '✗ Belum tepat'}</span>
+          </div>
+          <p class="rv-q">${esc(q.text)}</p>
+          <div class="rv-ans">
+            <span class="chip ${ok ? 'good' : 'bad'}">
+              Jawabanmu: ${letter(h.picked)}. ${esc(q.choices[h.picked])}
+            </span>
+            ${ok ? '' : `<span class="chip good">
+              Jawaban benar: ${letter(q.correct)}. ${esc(q.choices[q.correct])}
+            </span>`}
+          </div>
+          ${stepsHtml(q)}
+        </article>`;
+    }
+
+    function renderReview() {
+      const wrong = playLog.filter(h => h.picked !== h.q.correct).length;
+      const items = playLog
+        .map((h, i) => ({ h, i }))
+        .filter(x => rvFilter === 'all' || x.h.picked !== x.h.q.correct);
+      document.querySelector('#rvList').innerHTML = items.length
+        ? items.map(x => rvItem(x.h, x.i)).join('')
+        : '<div class="rv-empty">🎉 Semua jawabanmu benar! Tidak ada yang perlu diperbaiki.</div>';
+      document.querySelector('#rvFilterAll').textContent =
+        `Semua soal (${playLog.length})`;
+      document.querySelector('#rvFilterWrong').textContent =
+        `Yang belum tepat (${wrong})`;
+      document.querySelectorAll('.rv-filter button').forEach(b => {
+        b.classList.toggle('on', b.dataset.f === rvFilter);
+      });
+    }
+
+    function setRvFilter(f) {
+      rvFilter = f;
+      renderReview();
+    }
+
+    function openReview() {
+      rvFilter = 'all';
+      const lv = levels[currentLevel - 1];
+      const right = playLog.filter(h => h.picked === h.q.correct).length;
+      document.querySelector('#rvLevel').textContent =
+        `PULAU ${currentLevel} · ${lv.name.toUpperCase()}`;
+      document.querySelector('#rvSummary').textContent =
+        `${right} dari ${playLog.length} jawaban benar · skor ${lastScore}%. ` +
+        'Baca langkah-langkahnya, lalu coba lagi dengan soal baru!';
+      renderReview();
+      show('review');
+    }
+
+    function backToResult() {
+      show('result');
+      startFx(lastScore);
+    }
 
     function toast(t) {
       let x = document.querySelector('#toast');
